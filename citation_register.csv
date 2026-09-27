@@ -1,0 +1,445 @@
+cite,registry id,label,pages,npm package,repo path,ctx key,doc,maturity,evidence file:line
+C001,s_web,Web app,e0 w0,@deepseek-ai/dsh-web-app,packages/bundle/web-app,,,on,README.md:27; packages/bundle/web-app/cordis.patch.yml:164; packages/bundle/web-app/cordis.patch.yml:168
+C002,s_desktop,Desktop app,e0 w0,@deepseek-ai/dsh-desktop,apps/desktop,,,on,apps/desktop/package.json:3; apps/desktop-host/src/index.ts:30; apps/desktop/package.json:60
+C003,s_cli,One shot command line,e0 w0,@deepseek-ai/dsh-headless,packages/bundle/headless,,,on,packages/bundle/headless/package.json:3; AGENTS.md:102
+C004,s_sdk,SDK programs,e0 w0 w10,@deepseek-ai/dsh-sdk-client,packages/sdk/client,,,on,packages/sdk/client/package.json:3; docs/architecture.md:49
+C005,a_loop,Agent loop,w0 w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,ctx.agentLoop,docs/subsystems/core.md,on,packages/bundle/base/cordis.patch.yml:511; docs/architecture.md:86
+C006,a_tools,Tool registry,e0 w0 w1,@deepseek-ai/dsh-tools,packages/core/tools,ctx.tools,docs/tool-execution-pipeline.md,on,packages/bundle/web-app/cordis.patch.yml:32; docs/architecture.md:65
+C007,a_subagents,Subagents,w0,@deepseek-ai/dsh-subagent,packages/subagent/subagent,ctx.subagents,docs/subsystems/subagent.md,on,packages/bundle/base/cordis.patch.yml:349; packages/subagent/subagent/package.json:3; packages/bundle/web-app/presets/standard.patch.yml:90
+C008,d_log,Session log,w0 w1,@deepseek-ai/dsh-session,packages/core/session,ctx.sessions,docs/subsystems/session.md,on,packages/bundle/base/cordis.patch.yml:41; packages/core/session/package.json:3; docs/architecture.md:121
+C009,x_ssh,Remote over SSH,e0 w0,@deepseek-ai/dsh-ssh,packages/ssh/ssh,ctx.ssh,docs/subsystems/ssh.md,off,packages/ssh/ssh/package.json:3; packages/ssh/fs-ssh/package.json:3; packages/ssh/subprocess-ssh/package.json:3
+C010,t_mcp,MCP client,e0 w0 w3,@deepseek-ai/dsh-mcp-client,packages/mcp/mcp-client,,docs/subsystems/mcp.md,off,packages/mcp/mcp-client/package.json:3; packages/bundle/base/cordis.patch.yml:492
+C011,mp_api,DeepSeek API,e0 w0,@deepseek-ai/dsh-llm-deepseek-api-key,packages/llm/llm-deepseek-api-key,,,on,packages/bundle/base/cordis.patch.yml:525; packages/bundle/base/cordis.patch.yml:85; packages/bundle/base/cordis.patch.yml:86
+C012,mp_compat,Compatible endpoints,e0 w0,@deepseek-ai/dsh-llm-pi-ai,packages/llm/llm-pi-ai,,,on,packages/llm/llm-pi-ai/src/provider.ts:49; packages/llm/llm-pi-ai/src/provider.ts:50
+C013,ex_search,Web search providers,e0 w0,@deepseek-ai/dsh-web-search-deepseek,packages/web/web-search-deepseek,,,on,packages/bundle/base/cordis.patch.yml:478; packages/web/README.md:12
+C014,g_sandbox,Sandbox,w0,@deepseek-ai/dsh-sandbox-local,packages/sandbox/sandbox-local,ctx.sandbox,docs/subsystems/sandbox.md,on,packages/bundle/base/cordis.patch.yml:226; packages/bundle/base/cordis.patch.yml:229; packages/sandbox/sandbox-local/package.json:3
+C015,g_approval,Approval,w0,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,ctx.approval,docs/subsystems/approval.md,on,packages/bundle/base/cordis.patch.yml:245; packages/interaction/user-approval/package.json:3; packages/bundle/web-app/cordis.patch.yml:306
+C016,g_log_all,Every step in the session log,e0,@deepseek-ai/dsh-session,packages/core/session,,,on,AGENTS.md:136; packages/interaction/user-approval/src/index.ts:225
+C017,s_acp,ACP clients,e0 w0 w10,@deepseek-ai/dsh-acp,packages/acp/acp,,,on,packages/acp/acp/package.json:3
+C018,h_tree,Plugin tree,e0 w0,@deepseek-ai/dsh-app-boot,packages/boot/app-boot,,docs/architecture.md,on,docs/architecture.md:17; packages/boot/app-boot/src/profile.ts:179
+C019,h_gateway,Web server and API gateway,w0,@deepseek-ai/dsh-api-gateway,packages/api/gateway,ctx.webServer,docs/api-gateway.md,on,packages/bundle/web-app/cordis.patch.yml:164; packages/bundle/base/cordis.patch.yml:53; packages/api/gateway/package.json:3; packages/host/webserver/src/index.ts:145
+C020,a_registry,Agent registry,w0 w1,@deepseek-ai/dsh-agent,packages/core/agent,ctx.agents,,on,packages/bundle/base/cordis.patch.yml:75; packages/core/agent/package.json:3
+C021,a_prompt,System prompt,e0 w0 w1,@deepseek-ai/dsh-system-prompt,packages/core/system-prompt,ctx.systemPrompt,docs/subsystems/system-prompt.md,on,packages/bundle/web-app/cordis.patch.yml:16; docs/architecture.md:64
+C022,a_models,Model selection,e0 w0,@deepseek-ai/dsh-agent-default-model,packages/core/agent-default-model,ctx.agentDefaultModel,,on,packages/bundle/base/cordis.patch.yml:83; packages/bundle/base/cordis.patch.yml:85; packages/bundle/web-app/cordis.patch.yml:386; packages/core/agent-default-model/src/index.ts:58
+C023,a_compaction,Context compaction,w0,@deepseek-ai/dsh-compaction-basic,packages/compaction/compaction-basic,ctx.compaction,docs/subsystems/compaction.md,on,packages/bundle/web-app/presets/standard.patch.yml:70; packages/compaction/compaction-basic/package.json:3
+C024,a_workflow,Workflow engine,e0 w0 w7,@deepseek-ai/dsh-workflow-ptc,packages/workflow/workflow-ptc,ctx.workflowEngine,docs/subsystems/workflow.md,on,packages/bundle/web-app/presets/standard.patch.yml:119; packages/workflow/workflow-ptc/package.json:3; packages/workflow/tool-workflow/package.json:3
+C025,a_planning,"Plan, goals and todos",e0 w0,@deepseek-ai/dsh-plan-mode,packages/plan/plan-mode,,docs/subsystems/plan.md,on,packages/bundle/web-app/presets/standard.patch.yml:48; packages/bundle/web-app/presets/standard.patch.yml:40; packages/bundle/web-app/presets/standard.patch.yml:133
+C026,d_search,Session search,e0 w0 w2,@deepseek-ai/dsh-session-query-sqlite,packages/session-query/session-query-sqlite,ctx.sessionQuery,docs/subsystems/session-query.md,off,packages/bundle/web-app/cordis.patch.yml:27; packages/bundle/web-app/cordis.patch.yml:22; packages/session-query/session-query-sqlite/package.json:3
+C027,d_skills,Skills and instructions,e0 w0 w2,@deepseek-ai/dsh-skill-filesystem,packages/skill/skill-filesystem,ctx.skills,docs/subsystems/skills.md,on,packages/bundle/web-app/presets/standard.patch.yml:34; packages/bundle/web-app/presets/standard.patch.yml:16; packages/context/agent-instructions/package.json:3; packages/skill/skill/src/index.ts:374
+C028,x_shell,Shell,w0 w6,@deepseek-ai/dsh-bash-sandbox,packages/shell/bash-sandbox,ctx.shell,docs/subsystems/shell.md,on,packages/bundle/base/cordis.patch.yml:235; packages/bundle/base/cordis.patch.yml:241; packages/bundle/web-app/presets/standard.patch.yml:20
+C029,x_subprocess,Subprocesses,w0 w6,@deepseek-ai/dsh-subprocess-local,packages/subprocess/subprocess-local,ctx.subprocess,docs/subsystems/subprocess.md,on,packages/bundle/base/cordis.patch.yml:220; packages/subprocess/subprocess/package.json:3
+C030,x_files,File system,w0 w6,@deepseek-ai/dsh-fs-sandbox,packages/fs/fs-sandbox,ctx.fs,docs/subsystems/filesystem.md,on,packages/bundle/base/cordis.patch.yml:518; packages/bundle/web-app/presets/standard.patch.yml:26; packages/bundle/web-app/presets/standard.patch.yml:28
+C031,x_code,Code runtime,w0 w6,@deepseek-ai/dsh-ptc-runtime-node,packages/ptc-runtime/ptc-runtime-node,ctx.ptcRuntime,docs/subsystems/ptc-runtime.md,on,packages/bundle/base/cordis.patch.yml:390; packages/ptc-runtime/ptc-runtime-node/package.json:3; packages/ptc-runtime/ptc-runtime/src/index.ts:134
+C032,x_jobs,Background jobs,w0,@deepseek-ai/dsh-jobs-local,packages/jobs/jobs-local,ctx.jobs,docs/subsystems/jobs.md,on,packages/bundle/base/cordis.patch.yml:89; packages/jobs/jobs/package.json:3
+C033,x_web,Web search and fetch,w0,@deepseek-ai/dsh-web,packages/web/web,ctx.web,docs/subsystems/web.md,on,packages/bundle/base/cordis.patch.yml:472; packages/bundle/base/cordis.patch.yml:478; packages/bundle/base/cordis.patch.yml:483
+C034,x_terminals,Terminal tabs,w0,@deepseek-ai/dsh-api-terminal-controller,packages/api/terminal-controller,,docs/subsystems/terminal.md,on,packages/bundle/web-app/cordis.patch.yml:112; packages/api/terminal-controller/package.json:3; packages/bundle/web-app/cordis.patch.yml:277
+C035,x_lsp,Language servers,w0 w6,@deepseek-ai/dsh-tool-lsp,packages/lsp/tool-lsp,ctx.lsp,docs/subsystems/lsp.md,off,packages/lsp/tool-lsp/package.json:3; packages/lsp/lsp-stdio/package.json:3
+C036,x_browser,Browser and computer use,e0 w0,@deepseek-ai/dsh-experimental-browser-use-playwright-mcp,packages/experimental/browser-use-playwright-mcp,,docs/subsystems/browser-use.md,exp,packages/experimental/browser-use-playwright-mcp/package.json:3; packages/experimental/computer-use-cua-driver-mcp/package.json:3
+C037,p_standard,Standard mode,e0 w0 w7,@deepseek-ai/dsh-agent-preset,packages/preset/agent-preset,,docs/subsystems/permission-presets.md,on,packages/bundle/web-app/presets/standard.patch.yml:6; packages/bundle/web-app/cordis.patch.yml:562; packages/client/ui-agent-preset/src/client/locales.ts:46
+C038,p_ptc,PTC mode,e0 w0 w7,@deepseek-ai/dsh-agent-preset,packages/preset/agent-preset,,,on,packages/bundle/web-app/presets/ptc.patch.yml:6; packages/client/ui-agent-preset/src/client/locales.ts:49; packages/bundle/web-app/presets/ptc.patch.yml:144
+C039,p_minimal,Minimal mode,e0 w0 w7,@deepseek-ai/dsh-agent-preset,packages/preset/agent-preset,,,on,packages/bundle/web-app/presets/minimal.patch.yml:6; packages/client/ui-agent-preset/src/client/locales.ts:52; packages/bundle/web-app/presets/minimal.patch.yml:17
+C040,p_creator,Creator mode,e0 w0 w7,@deepseek-ai/dsh-agent-preset,packages/preset/agent-preset,,,on,packages/bundle/web-app/presets/cordis.patch.yml:6; packages/client/ui-agent-preset/src/client/locales.ts:55; packages/bundle/web-app/presets/cordis.patch.yml:141
+C041,p_teams,Agent Teams,e0 w0,@deepseek-ai/dsh-experimental-agent-team-profile,packages/experimental/agent-team-profile,,docs/subsystems/agent-team.md,exp,packages/experimental/agent-team-profile/package.json:3; packages/boot/app-boot/src/profile.ts:214
+C042,c_remote,Remote API,w0,@deepseek-ai/dsh-api-remotes,packages/api/remotes,,docs/api-gateway.md,on,packages/api/gateway/src/stream-protocol.ts:7; packages/bundle/web-app/cordis.patch.yml:225; packages/api/remotes/package.json:3
+C043,c_sdk,SDK server,w0 w10 w3,@deepseek-ai/dsh-sdk-jsonrpc-server,packages/sdk/server,,,off,packages/sdk/server/package.json:3; packages/bundle/sdk-app/cordis.patch.yml:19
+C044,c_acp,ACP server,w0 w10 w3,@deepseek-ai/dsh-acp,packages/acp/acp,,docs/subsystems/web.md,off,packages/acp/acp/package.json:3; packages/bundle/acp-app/cordis.patch.yml:17
+C045,m_deepseek,DeepSeek adapter,w0,@deepseek-ai/dsh-llm-deepseek,packages/llm/llm-deepseek,ctx.llm,docs/subsystems/llm-streaming.md,on,packages/bundle/base/cordis.patch.yml:525; packages/bundle/base/cordis.patch.yml:528; packages/llm/llm-deepseek/src/config.ts:106
+C046,m_piai,pi ai adapter,w0,@deepseek-ai/dsh-llm-pi-ai,packages/llm/llm-pi-ai,,,on,packages/bundle/base/cordis.patch.yml:128; packages/llm/llm-pi-ai/src/provider.ts:48
+C047,m_retry,Retry policy,w0 w1,@deepseek-ai/dsh-llm-retry,packages/llm/llm-retry,,,on,packages/bundle/base/cordis.patch.yml:92; packages/llm/llm-retry/package.json:3; packages/llm/llm/src/retry-policy.ts:19; packages/llm/llm/src/retry-policy.ts:20
+C048,t_hooks,Hook bridges,w0 w3,@deepseek-ai/dsh-hooks-claude-code,packages/hooks/hooks-claude-code,,,off,packages/hooks/hooks-claude-code/package.json:3; packages/hooks/hooks-codex/package.json:3
+C049,t_webhook,GitHub webhook,w0 w3,@deepseek-ai/dsh-webhook-github,packages/webhook/webhook-github,ctx.webhookRuntime,docs/subsystems/webhook.md,off,packages/webhook/webhook-github/package.json:3; docs/architecture.md:70
+C050,st_sessions,Session files,w0 w6,@deepseek-ai/dsh-session-persistence-jsonl,packages/session/session-persistence-jsonl,ctx.sessionPersistence,docs/subsystems/persistence.md,on,packages/bundle/base/cordis.patch.yml:131; packages/bundle/base/cordis.patch.yml:133; packages/session/session-persistence/src/index.ts:140
+C051,st_kv,Key value storage,e0 w0 w2 w6,@deepseek-ai/dsh-storage-json,packages/storage/storage-json,ctx.storage,docs/subsystems/storage.md,on,packages/bundle/base/cordis.patch.yml:169; packages/bundle/base/cordis.patch.yml:171
+C052,st_attach,Attachments,e0 w0 w2 w6,@deepseek-ai/dsh-attachment-local,packages/attachment/attachment-local,ctx.attachments,docs/subsystems/attachment.md,on,packages/bundle/base/cordis.patch.yml:139; packages/attachment/attachment-local/package.json:3; packages/attachment/attachment/src/index.ts:55
+C053,mp_account,DeepSeek account,e0 w0,@deepseek-ai/dsh-llm-deepseek-account,packages/llm/llm-deepseek-account,,,on,packages/bundle/base/cordis.patch.yml:528; packages/credentials/deepseek-account-platform/package.json:3
+C054,mp_custom,Your own endpoint,e0 w0,@deepseek-ai/dsh-client-ui-settings-models,packages/client/ui-settings-models,,,on,packages/client/ui-settings-models/README.md:54; packages/llm/llm-pi-ai/src/config.ts:104
+C055,ex_mcp,MCP servers,e0 w0,@deepseek-ai/dsh-mcp-client,packages/mcp/mcp-client,,,off,packages/mcp/mcp-client/README.md:28; packages/mcp/mcp-client/package.json:3
+C056,ex_github,GitHub,e0 w0,@deepseek-ai/dsh-webhook-github,packages/webhook/webhook-github,,,off,packages/webhook/webhook-github/package.json:3
+C057,ex_npm,npm registry,e0 w0,@deepseek-ai/dsh-plugin-manager,packages/boot/plugin-manager,,packages/boot/plugin-manager/README.md,on,packages/bundle/base/cordis.patch.yml:21; packages/boot/plugin-manager/package.json:3
+C058,ex_agents,Codex and Claude Code,e0 w0,@deepseek-ai/dsh-subagent-codex,packages/subagent/subagent-codex,,,off,packages/bundle/web-app/presets/standard.patch.yml:103; packages/bundle/web-app/presets/standard.patch.yml:111; packages/subagent/subagent-codex/package.json:3
+C059,g_fence,Write fence,e0 w0 w4,@deepseek-ai/dsh-fs-sandbox,packages/fs/fs-sandbox,,,on,packages/bundle/base/cordis.patch.yml:518; packages/fs/fs-sandbox/package.json:3
+C060,g_presets,Permission presets,w0,@deepseek-ai/dsh-permission-presets,packages/interaction/permission-presets,ctx.permissionPresets,docs/subsystems/permission-presets.md,on,packages/bundle/base/cordis.patch.yml:250; packages/bundle/base/cordis.patch.yml:253; packages/bundle/base/cordis.patch.yml:259
+C061,g_guards,Loop guards,w0 w4,@deepseek-ai/dsh-repeat-tool-reminder,packages/guard/repeat-tool-reminder,,,on,packages/bundle/base/cordis.patch.yml:455; packages/bundle/base/cordis.patch.yml:401
+C062,g_creds,Credential store,w0,@deepseek-ai/dsh-credentials-local,packages/credentials/credentials-local,ctx.credentials,docs/subsystems/credentials.md,on,packages/bundle/base/cordis.patch.yml:118; packages/credentials/credentials/package.json:3
+C063,g_token,Launch token and cookie,w0,@deepseek-ai/dsh-client-connection,packages/client/connection,ctx.connection,,on,packages/bundle/web-app/cordis.patch.yml:211; packages/client/connection/README.md:39
+C064,g_telemetry,Session telemetry,e0 w0 w5,@deepseek-ai/dsh-session-telemetry-otel,packages/session/session-telemetry-otel,,docs/subsystems/session-telemetry.md,on,packages/bundle/base/cordis.patch.yml:205; packages/bundle/base/cordis.patch.yml:207; packages/session/session-telemetry-otel/package.json:31
+C065,g_invariants,Runtime invariants,e0 w0 w5,@deepseek-ai/dsh-invariants,packages/runtime-diagnostics/invariants,ctx.invariants,docs/subsystems/invariants.md,off,packages/runtime-diagnostics/invariants/package.json:3; packages/bundle/sdk-minimal/cordis.patch.yml:107
+C066,w_local,On your own machine,e0,@deepseek-ai/dsh-web-app,packages/bundle/web-app,,,on,packages/bundle/web-app/cordis.patch.yml:167; packages/bundle/web-app/src/startup.ts:75; packages/client/connection/README.md:45
+C067,i_followup,Follow up message,e0 w1,@deepseek-ai/dsh-agent,packages/core/agent,,packages/core/agent/README.md,on,packages/core/agent/README.md:47; packages/core/agent/src/runtime-types.ts:222
+C068,i_steer,Steering input,e0 w1,@deepseek-ai/dsh-agent,packages/core/agent,,packages/core/agent/README.md,on,packages/core/agent/README.md:47; packages/core/agent/src/runtime-types.ts:231
+C069,i_inject,Injected context,e0 w1,@deepseek-ai/dsh-agent,packages/core/agent,,packages/core/agent/README.md,on,packages/core/agent/README.md:47; packages/core/agent/src/runtime-types.ts:241
+C070,i_webhook,Webhook delivery,e0 w1,@deepseek-ai/dsh-webhook,packages/webhook/webhook,ctx.webhookRuntime,docs/subsystems/webhook.md,off,packages/webhook/webhook/package.json:3; docs/architecture.md:150
+C071,t_start,Turn start,w1,@deepseek-ai/dsh-session,packages/core/session,,,on,packages/core/session/src/types.ts:283; packages/core/agent-loop/src/agent.ts:305
+C072,t_claim,Claim input,w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,docs/architecture.md,on,docs/architecture.md:90; packages/core/agent-loop/src/agent.ts:271
+C073,t_assemble,Assemble prompt,w1,@deepseek-ai/dsh-system-prompt,packages/core/system-prompt,,docs/architecture.md,on,docs/architecture.md:91; packages/core/system-prompt/src/index.ts:626
+C074,t_prestep,Pre step decision,w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,docs/architecture.md,on,docs/architecture.md:113; packages/core/agent-loop/src/agent.ts:277
+C075,t_prepare,Prepare the call,w1,@deepseek-ai/dsh-llm,packages/llm/llm,,docs/architecture.md,on,docs/architecture.md:113; packages/core/agent-loop/src/agent.ts:570
+C076,t_freeze,Freeze history,w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,docs/architecture.md,on,docs/architecture.md:98; packages/core/agent-loop/src/agent.ts:654
+C077,t_stream,Stream the reply,e0 w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,docs/architecture.md,on,docs/architecture.md:99; docs/architecture.md:109; packages/core/agent-loop/src/agent.ts:415
+C078,t_tools,Run tool calls,w1,@deepseek-ai/dsh-tools,packages/core/tools,,docs/tool-execution-pipeline.md,on,docs/architecture.md:102; packages/core/agent-loop/src/tool-calls.ts:264
+C079,t_stepend,Step end,w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,docs/architecture.md,on,docs/architecture.md:104; packages/core/agent-loop/src/agent.ts:339
+C080,t_stopping,Turn stopping,w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,docs/architecture.md,on,docs/architecture.md:153; packages/core/agent-loop/src/agent.ts:343
+C081,tp_logged,Call logged,w1,@deepseek-ai/dsh-tools,packages/core/tools,,docs/tool-execution-pipeline.md,on,docs/tool-execution-pipeline.md:11; packages/core/agent-loop/src/tool-calls.ts:264
+C082,tp_pre,Pre execute,e0 w1,@deepseek-ai/dsh-tools,packages/core/tools,,docs/tool-execution-pipeline.md,on,docs/tool-execution-pipeline.md:6; docs/tool-execution-pipeline.md:39; packages/core/tools/src/index.ts:1506; packages/core/tools/src/index.ts:610
+C083,tp_approval,Approval,e0 w1,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,,docs/subsystems/approval.md,on,docs/tool-execution-pipeline.md:40; docs/tool-execution-pipeline.md:16; packages/core/tools/src/index.ts:1753
+C084,tp_guards,Guards,e0 w1,@deepseek-ai/dsh-tools,packages/core/tools,,docs/tool-execution-pipeline.md,on,docs/tool-execution-pipeline.md:14; packages/core/tools/src/index.ts:769
+C085,tp_wrap,Execute wrappers,w1,@deepseek-ai/dsh-tools,packages/core/tools,,docs/tool-execution-pipeline.md,on,docs/tool-execution-pipeline.md:17; packages/core/tools/src/index.ts:1606
+C086,tp_post,Post execute,w1,@deepseek-ai/dsh-tools,packages/core/tools,,docs/tool-execution-pipeline.md,on,docs/tool-execution-pipeline.md:22; packages/core/tools/src/index.ts:1783
+C087,tp_result,Result logged,w1,@deepseek-ai/dsh-tools,packages/core/tools,,docs/tool-execution-pipeline.md,on,docs/tool-execution-pipeline.md:27; packages/core/agent-loop/src/tool-calls.ts:282
+C088,cs_llm,Model service,e0 w1,@deepseek-ai/dsh-llm,packages/llm/llm,ctx.llm,docs/subsystems/llm-streaming.md,on,packages/bundle/base/cordis.patch.yml:35; packages/llm/llm/package.json:3
+C089,cs_scope,Scoped registration,w1,@deepseek-ai/dsh-scope,packages/core/scope,,docs/subsystems/scope.md,on,packages/core/scope/package.json:3; docs/architecture.md:68
+C090,cs_projection,Session projections,e0 w1 w2,@deepseek-ai/dsh-session-projection,packages/session/session-projection,ctx.sessionProjections,docs/subsystems/session-projection.md,on,packages/bundle/base/cordis.patch.yml:159; docs/architecture.md:127
+C091,mc_series,Request series,w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,docs/architecture.md,on,docs/architecture.md:113; packages/core/agent-loop/src/agent.ts:392
+C092,mc_cancel,Cancellation,w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,docs/architecture.md,on,docs/architecture.md:113; docs/architecture.md:115; packages/core/agent-loop/src/agent.ts:560
+C093,mc_meter,Token meter,e0 w1 w5,@deepseek-ai/dsh-token-meter,packages/llm/token-meter,ctx.tokenMeter,docs/subsystems/token-meter.md,on,packages/bundle/base/cordis.patch.yml:338; packages/llm/token-meter/package.json:3
+C094,ep_session,Session events,w1,@deepseek-ai/dsh-session,packages/core/session,,docs/event-producer-consumer.md,on,docs/architecture.md:76; packages/core/session/src/types.ts:281
+C095,ep_agent,Agent events,w1,@deepseek-ai/dsh-agent,packages/core/agent,,docs/event-producer-consumer.md,on,docs/architecture.md:77
+C096,ep_capability,Capability events,w1,@deepseek-ai/dsh-tools,packages/core/tools,,docs/capability-seams.md,on,docs/architecture.md:78
+C097,ep_waterfall,Waterfalls call next,w1,@deepseek-ai/cordis,vendor/cordis,,docs/cordis-primer.md,on,AGENTS.md:135; vendor/cordis/src/events.ts:29
+C098,lg_repeat,Repeat call reminder,e0 w1,@deepseek-ai/dsh-repeat-tool-reminder,packages/guard/repeat-tool-reminder,,,on,packages/bundle/base/cordis.patch.yml:455; packages/bundle/base/cordis.patch.yml:457
+C099,lg_timeout,Tool timeout,e0 w1,@deepseek-ai/dsh-tool-call-timeout-policy,packages/guard/timeout-policy,,,on,packages/bundle/base/cordis.patch.yml:401; packages/guard/timeout-policy/package.json:3
+C100,lg_parallel,Parallel tool calls,e0 w1,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,,on,packages/core/agent-loop/src/constants.ts:6
+C101,lg_checkpoint,Durability checkpoints,w1,@deepseek-ai/dsh-session-checkpoint-policy,packages/session/session-checkpoint-policy,,,on,packages/bundle/base/cordis.patch.yml:413; packages/session/session-checkpoint-policy/package.json:3
+C102,lr_turns,Turns and steps,e0 w2,@deepseek-ai/dsh-session,packages/core/session,,docs/subsystems/session.md,on,packages/core/session/src/types.ts:297; packages/core/session/src/types.ts:299
+C103,lr_messages,Messages,e0 w2,@deepseek-ai/dsh-session,packages/core/session,,,on,packages/core/session/src/types.ts:330; packages/core/session/src/types.ts:311; packages/core/session/src/types.ts:341
+C104,lr_tools,Tool calls and results,e0 w2 w7,@deepseek-ai/dsh-session,packages/core/session,,,on,packages/core/session/src/types.ts:361; packages/core/session/src/types.ts:375
+C105,lr_requests,Request headers and context,e0 w2,@deepseek-ai/dsh-session,packages/core/session,,,on,packages/core/session/src/types.ts:390; packages/core/session/src/types.ts:402
+C106,lr_attempts,Failed attempts,e0 w2,@deepseek-ai/dsh-session,packages/core/session,,,on,packages/core/session/src/types.ts:355; docs/architecture.md:121
+C107,lr_plugins,Plugin events,e0 w2,@deepseek-ai/dsh-session,packages/core/session,,docs/persistence-catalog.md,on,packages/interaction/user-approval/src/index.ts:225; packages/compaction/compaction-basic/src/region.ts:491; packages/subagent/subagent/src/continuation-activation.ts:627
+C108,od_folder,Session folder,w2,@deepseek-ai/dsh-session-persistence-jsonl,packages/session/session-persistence-jsonl,,packages/session/session-persistence-jsonl/README.md,on,packages/bundle/base/cordis.patch.yml:133; packages/session/session-persistence-jsonl/README.md:60
+C109,od_file,Versioned JSONL file,e0 w2,@deepseek-ai/dsh-session-format,packages/session/session-format,,,on,packages/session/session-format/src/filename.ts:16; packages/core/session/src/types.ts:89
+C110,od_zstd,Compressed frames,e0 w2,@deepseek-ai/dsh-session-persistence-jsonl,packages/session/session-persistence-jsonl,,,on,packages/session/session-persistence-jsonl/src/zstd.ts:9; packages/session/session-persistence-jsonl/src/zstd.ts:10; packages/session/session-persistence-jsonl/src/index.ts:248
+C111,od_lease,Write lease,e0 w2,@deepseek-ai/dsh-session-persistence-jsonl,packages/session/session-persistence-jsonl,,,on,packages/session/session-persistence-jsonl/src/lease.ts:4
+C112,od_publish,Atomic publish,e0 w2,@deepseek-ai/dsh-session-persistence-jsonl,packages/session/session-persistence-jsonl,,,on,packages/session/session-persistence-jsonl/src/index.ts:1175
+C113,fm_1,Version 0 to 1,w2,@deepseek-ai/dsh-session-format-v0-to-v1,packages/session/session-format-v0-to-v1,,,on,packages/session/session-format-v0-to-v1/package.json:3
+C114,fm_2,Version 1 to 2,w2,@deepseek-ai/dsh-session-format-v1-to-v2,packages/session/session-format-v1-to-v2,,,on,packages/session/session-format-v1-to-v2/package.json:3
+C115,fm_3,Version 2 to 3,w2,@deepseek-ai/dsh-session-format-v2-to-v3,packages/session/session-format-v2-to-v3,,,on,packages/session/session-format-v2-to-v3/package.json:3
+C116,fm_4,Version 3 to 4,w2,@deepseek-ai/dsh-session-format-v3-to-v4,packages/session/session-format-v3-to-v4,,docs/session-format-status.md,on,packages/session/session-format-v3-to-v4/package.json:3; packages/core/session/src/types.ts:89
+C117,rl_history,Model history,e0 w2,@deepseek-ai/dsh-session,packages/core/session,,,on,docs/architecture.md:121; packages/core/agent-loop/src/agent.ts:654
+C118,rl_cache,Projection cache,w2,@deepseek-ai/dsh-session-projection-cache,packages/session/session-projection-cache,ctx.sessionProjectionCache,,on,packages/bundle/base/cordis.patch.yml:183; packages/bundle/base/cordis.patch.yml:185; packages/bundle/base/cordis.patch.yml:186
+C119,rl_stats,Session stats,w2,@deepseek-ai/dsh-session-stats,packages/session/session-stats,,,on,packages/bundle/web-app/cordis.patch.yml:84; packages/session/session-stats/package.json:3
+C120,rl_outline,Turn outline,w2,@deepseek-ai/dsh-session-turn-outline,packages/session/session-turn-outline,,,on,packages/bundle/web-app/cordis.patch.yml:89; packages/session/session-turn-outline/package.json:3
+C121,cx_system,System prompt node,e0 w2,@deepseek-ai/dsh-system-prompt,packages/core/system-prompt,,docs/subsystems/system-prompt.md,on,docs/architecture.md:113; packages/core/agent-loop/src/runtime-context.ts:3
+C122,cx_runtime,Runtime context,e0 w2,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,,on,packages/core/agent-loop/src/runtime-context.ts:4
+C123,cx_sessionref,Session references,e0 w2,@deepseek-ai/dsh-session-reference,packages/context/session-reference,ctx.sessionReferenceResolver,docs/subsystems/session-reference.md,on,packages/bundle/web-app/cordis.patch.yml:76; packages/context/session-reference/package.json:3
+C124,cx_fileref,File references,e0 w2,@deepseek-ai/dsh-file-reference-local,packages/context/file-reference-local,ctx.fileReferences,,on,packages/bundle/web-app/cordis.patch.yml:79; packages/context/file-reference/package.json:3
+C125,cx_time,Time context,w2,@deepseek-ai/dsh-time-context,packages/context/time-context,,,off,packages/bundle/web-app/cordis.patch.yml:122; packages/context/time-context/package.json:3
+C126,cp_pressure,Pressure trigger,e0 w2,@deepseek-ai/dsh-compaction-basic,packages/compaction/compaction-basic,,docs/subsystems/compaction.md,on,packages/compaction/compaction-basic/src/config.ts:20; packages/compaction/compaction-basic/src/index.ts:164
+C127,cp_overflow,Overflow recovery,w2,@deepseek-ai/dsh-compaction-basic,packages/compaction/compaction-basic,,,on,packages/compaction/compaction-basic/src/index.ts:205
+C128,cp_manual,Compact command,w2,@deepseek-ai/dsh-command-compact,packages/compaction/command-compact,,,on,packages/bundle/web-app/presets/standard.patch.yml:72; packages/compaction/command-compact/src/index.ts:67
+C129,cp_keep,Recent tail kept,e0 w2,@deepseek-ai/dsh-compaction-basic,packages/compaction/compaction-basic,,,on,packages/compaction/compaction-basic/src/config.ts:23
+C130,cp_prune,Tool result pruning,w2,@deepseek-ai/dsh-compaction-tool-result-pruner,packages/compaction/compaction-tool-result-pruner,ctx.toolResultPruner,,on,packages/bundle/web-app/presets/standard.patch.yml:74; packages/compaction/compaction-tool-result-pruner/package.json:3
+C131,cp_image,Image offload,w2,@deepseek-ai/dsh-compaction-image-offload,packages/compaction/compaction-image-offload,,,on,packages/bundle/base/cordis.patch.yml:427; packages/compaction/compaction-image-offload/package.json:3
+C132,cp_summary,Summary logged,e0 w2,@deepseek-ai/dsh-compaction-basic,packages/compaction/compaction-basic,,,on,packages/compaction/compaction-basic/src/region.ts:491
+C133,sp_policy,Spill policy,w2,@deepseek-ai/dsh-spill-policy,packages/spill/spill-policy,,,on,packages/bundle/base/cordis.patch.yml:407; packages/bundle/base/cordis.patch.yml:409
+C134,sp_store,Spill store,w2,@deepseek-ai/dsh-spill-local,packages/spill/spill-local,ctx.spillStore,docs/subsystems/spill.md,on,packages/bundle/base/cordis.patch.yml:404; packages/spill/spill-local/src/store.ts:16; packages/spill/spill-local/src/store.ts:13; packages/spill/spill/src/index.ts:47
+C135,os_sqlite,SQLite storage,w2,@deepseek-ai/dsh-storage-sqlite,packages/storage/storage-sqlite,,,off,packages/storage/storage-sqlite/package.json:3; packages/storage/storage-sqlite/src/schema.ts:9
+C136,os_export,Session export,w2 w5,@deepseek-ai/dsh-session-log-export,packages/session-query/session-log-export,,,on,packages/bundle/web-app/cordis.patch.yml:57; packages/session-query/session-log-export/package.json:3
+C137,mm_memorix,Memorix,w2,,apps/cli/config/examples/mcp-memory,,docs/user/guide/mcp-memory.md,off,apps/cli/config/examples/mcp-memory/memorix.cordis.yml:1
+C138,mm_reference,Reference memory,e0 w2,,apps/cli/config/examples/mcp-memory,,,off,apps/cli/config/examples/mcp-memory/mcp-reference-memory.cordis.yml:9; docs/user/guide/mcp-memory.md:53
+C139,mm_engram,Engram,w2,,apps/cli/config/examples/mcp-memory,,,off,apps/cli/config/examples/mcp-memory/engram.cordis.yml:9
+C140,tl_shell,Shell command,e0 w3,@deepseek-ai/dsh-tool-bash,packages/shell/tool-bash,,docs/subsystems/shell.md,on,packages/bundle/web-app/presets/standard.patch.yml:20; packages/shell/tool-bash/package.json:3; packages/bundle/web-app/presets/standard.patch.yml:23; packages/shell/tool-pwsh/package.json:3; packages/shell/tool-bash/src/index.ts:195
+C141,tl_files,"Read, write and edit",e0 w3,@deepseek-ai/dsh-tool-fs,packages/fs/tool-fs,,,on,packages/bundle/web-app/presets/standard.patch.yml:26; packages/fs/tool-fs/package.json:3
+C142,tl_search,Glob and grep,e0 w3,@deepseek-ai/dsh-tool-fs-search,packages/fs/tool-fs-search,,,on,packages/bundle/web-app/presets/standard.patch.yml:28; packages/fs/tool-fs-search/package.json:3; packages/fs/tool-fs-search/package.json:30
+C143,tl_runcode,Run code,e0 w3 w7,@deepseek-ai/dsh-tools,packages/core/tools,,docs/subsystems/ptc-runtime.md,on,packages/bundle/web-app/presets/ptc.patch.yml:144; packages/core/tools/src/ptc.ts:30
+C144,tl_persist,Persistent shell,w3 w7,@deepseek-ai/dsh-tool-bash-persistent,packages/shell/tool-bash-persistent,,,on,packages/bundle/web-app/presets/minimal.patch.yml:17; packages/shell/tool-bash-persistent/package.json:3; packages/shell/tool-pwsh-persistent/package.json:3
+C145,tl_terminal,Terminal tools,e0 w3,@deepseek-ai/dsh-tool-terminal,packages/terminal/tool-terminal,ctx.terminals,docs/subsystems/terminal.md,off,packages/terminal/tool-terminal/package.json:3; packages/terminal/terminal/src/index.ts:116; packages/terminal/terminal-bash/package.json:43; packages/terminal/terminal-bash/src/session.ts:4; packages/subprocess/subprocess-local/package.json:53
+C146,tl_plan,Exit plan mode,w3,@deepseek-ai/dsh-plan-mode,packages/plan/plan-mode,,docs/subsystems/plan.md,on,packages/bundle/web-app/presets/standard.patch.yml:48; packages/plan/plan-mode/src/index.ts:67
+C147,tl_goal,Goals,w3,@deepseek-ai/dsh-tool-goal,packages/goal/tool-goal,,docs/subsystems/goal.md,on,packages/bundle/web-app/presets/standard.patch.yml:40; packages/goal/tool-goal/package.json:3
+C148,tl_todo,Todo list,w3,@deepseek-ai/dsh-tool-todo,packages/todo/tool-todo,,,on,packages/bundle/web-app/presets/standard.patch.yml:133; packages/todo/tool-todo/package.json:3
+C149,tl_ask,Ask the user,e0 w3,@deepseek-ai/dsh-tool-ask-user,packages/interaction/tool-ask-user,,docs/subsystems/user-questions.md,on,packages/bundle/web-app/presets/standard.patch.yml:131; packages/interaction/tool-ask-user/src/index.ts:20
+C150,tl_present,Present files,w3,@deepseek-ai/dsh-tool-present,packages/deliverables/tool-present,,docs/subsystems/deliverables.md,on,packages/bundle/web-app/presets/standard.patch.yml:142; packages/deliverables/tool-present/package.json:3
+C151,tl_skill,Load a skill,e0 w3,@deepseek-ai/dsh-tool-skill,packages/skill/tool-skill,,,on,packages/bundle/web-app/presets/standard.patch.yml:36; packages/skill/tool-skill/package.json:3
+C152,tl_subagent,Subagent,w3,@deepseek-ai/dsh-tool-subagent,packages/subagent/tool-subagent,,,on,packages/bundle/web-app/presets/standard.patch.yml:90; packages/subagent/tool-subagent/package.json:3
+C153,tl_fork,Fork,w3,@deepseek-ai/dsh-subagent-fork-in-process,packages/subagent/subagent-fork-in-process,,,on,packages/bundle/web-app/presets/standard.patch.yml:97; packages/subagent/subagent-fork-in-process/package.json:3
+C154,tl_control,Message and interrupt,w3,@deepseek-ai/dsh-tool-subagent-control,packages/subagent/tool-subagent-control,,,on,packages/bundle/web-app/presets/standard.patch.yml:86; packages/subagent/tool-subagent-control/package.json:3
+C155,tl_workflow,Workflow,w3,@deepseek-ai/dsh-tool-workflow,packages/workflow/tool-workflow,,,on,packages/bundle/web-app/presets/standard.patch.yml:123; packages/workflow/tool-workflow/package.json:3
+C156,tl_ralph,Ralph loop,w3,@deepseek-ai/dsh-tool-ralph,packages/workflow/tool-ralph,,,off,packages/bundle/web-app/presets/standard.patch.yml:125; packages/workflow/tool-ralph/package.json:3
+C157,tl_websearch,Web search,e0 w3,@deepseek-ai/dsh-tool-web,packages/web/tool-web,,,on,packages/bundle/web-app/presets/standard.patch.yml:137; packages/bundle/base/cordis.patch.yml:478; packages/bundle/base/cordis.patch.yml:474
+C158,tl_webfetch,Web fetch,e0 w3,@deepseek-ai/dsh-web-fetch-http,packages/web/web-fetch-http,,,on,packages/bundle/base/cordis.patch.yml:483; packages/web/web-fetch-http/README.md:2
+C159,tl_mcpres,MCP resources,w3,@deepseek-ai/dsh-mcp-resources,packages/mcp/mcp-resources,ctx.mcpResources,,on,packages/bundle/base/cordis.patch.yml:492; packages/mcp/mcp-resources/package.json:3; packages/mcp/mcp-resources/src/index.ts:56
+C160,tl_history,Session history,w3,@deepseek-ai/dsh-tool-session-query,packages/session-query/tool-session-query,,,off,packages/session-query/tool-session-query/package.json:3
+C161,tl_lsp,Code navigation,w3,@deepseek-ai/dsh-tool-lsp,packages/lsp/tool-lsp,,,off,packages/lsp/tool-lsp/package.json:3
+C162,mc_transports,Two transports,w3,@deepseek-ai/dsh-mcp-client,packages/mcp/mcp-client,,packages/mcp/mcp-client/README.md,off,packages/mcp/mcp-client/src/transport.ts:40; packages/mcp/mcp-client/src/transport.ts:33
+C163,mc_names,Server qualified names,w3,@deepseek-ai/dsh-mcp-client,packages/mcp/mcp-client,,,off,packages/mcp/mcp-client/README.md:75; packages/mcp/mcp-client/src/transport.ts:33
+C164,mc_instr,Server instructions,w3,@deepseek-ai/dsh-mcp-client,packages/mcp/mcp-client,,,off,packages/mcp/mcp-client/README.md:12; packages/mcp/mcp-client/package.json:3
+C165,pr_acpclient,ACP subagent,e0 w3 w7,@deepseek-ai/dsh-subagent-acp,packages/subagent/subagent-acp,,docs/subsystems/subagent.md,off,packages/subagent/subagent-acp/package.json:3
+C166,bu_playwright,Playwright MCP,w3,@deepseek-ai/dsh-experimental-browser-use-playwright-mcp,packages/experimental/browser-use-playwright-mcp,,docs/subsystems/browser-use.md,exp,packages/experimental/browser-use-playwright-mcp/package.json:3
+C167,bu_devtools,Chrome DevTools MCP,w3,@deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp,packages/experimental/browser-use-chrome-devtools-mcp,,,exp,packages/experimental/browser-use-chrome-devtools-mcp/package.json:3
+C168,bu_stagehand,Stagehand,w3,@deepseek-ai/dsh-experimental-browser-use-stagehand-native,packages/experimental/browser-use-stagehand-native,,,exp,packages/experimental/browser-use-stagehand-native/package.json:3
+C169,bu_cua,Cua driver,w3,@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp,packages/experimental/computer-use-cua-driver-mcp,,docs/subsystems/computer-use.md,exp,packages/experimental/computer-use-cua-driver-mcp/package.json:3; packages/experimental/computer-use-cua-driver-mcp/README.md:28
+C170,ss_conn,SSH connection,w3 w6,@deepseek-ai/dsh-ssh,packages/ssh/ssh,ctx.ssh,docs/subsystems/ssh.md,off,packages/ssh/ssh/package.json:3
+C171,ss_fs,Remote files,w3,@deepseek-ai/dsh-fs-ssh,packages/ssh/fs-ssh,,,off,packages/ssh/fs-ssh/package.json:3
+C172,ss_proc,Remote processes,w3,@deepseek-ai/dsh-subprocess-ssh,packages/ssh/subprocess-ssh,,,off,packages/ssh/subprocess-ssh/package.json:3
+C173,ss_sandbox,Remote sandbox,w3 w4,@deepseek-ai/dsh-sandbox-ssh,packages/ssh/sandbox-ssh,,,off,packages/ssh/sandbox-ssh/package.json:3
+C174,ak_escalate,Wider sandbox request,w3,@deepseek-ai/dsh-sandbox,packages/sandbox/sandbox,,,on,packages/shell/tool-bash/src/index.ts:68; packages/sandbox/sandbox/src/escalation.ts:45
+C175,ak_plugin,Plugin manager tool,w3,@deepseek-ai/dsh-plugin-manager,packages/boot/plugin-manager,,,off,packages/boot/plugin-manager/src/tools.ts:21; packages/bundle/web-app/cordis.patch.yml:444
+C176,ak_hooks,Hook decisions,w3,@deepseek-ai/dsh-hooks-claude-code,packages/hooks/hooks-claude-code,,,off,packages/hooks/hooks-claude-code/README.md:60; packages/hooks/hooks-claude-code/package.json:3
+C177,sm_ro,Read only,e0 w4,@deepseek-ai/dsh-sandbox,packages/sandbox/sandbox,ctx.sandbox,docs/subsystems/sandbox.md,on,packages/sandbox/sandbox/src/index.ts:30
+C178,sm_ww,Workspace write,e0 w4,@deepseek-ai/dsh-sandbox-policy,packages/sandbox/sandbox-policy,ctx.sandboxPolicy,,on,packages/bundle/base/cordis.patch.yml:231; packages/bundle/base/cordis.patch.yml:232; packages/sandbox/sandbox-policy/src/index.ts:126
+C179,sm_full,Full access,e0 w4,@deepseek-ai/dsh-sandbox,packages/sandbox/sandbox,,,on,packages/sandbox/sandbox/src/index.ts:33
+C180,sm_unavail,No usable backend,e0 w4,@deepseek-ai/dsh-sandbox,packages/sandbox/sandbox,,,on,packages/sandbox/sandbox/src/index.ts:125
+C181,sb_bwrap,bubblewrap,e0 w4,@deepseek-ai/dsh-sandbox-local,packages/sandbox/sandbox-local,,,on,packages/sandbox/sandbox-local/src/profiles.ts:16
+C182,sb_landlock,Landlock,e0 w4,@deepseek-ai/node-addon-system,native/system/packages/entry,,,on,packages/sandbox/sandbox-local/src/index.ts:34; native/system/packages/entry/package.json:5
+C183,sb_seatbelt,Seatbelt,e0 w4,@deepseek-ai/dsh-sandbox-local,packages/sandbox/sandbox-local,,,on,packages/sandbox/sandbox-local/src/index.ts:79
+C184,sb_windows,Restricted token,e0 w4,@deepseek-ai/dsh-sandbox-windows-acl,packages/sandbox/sandbox-windows-acl,,,on,packages/sandbox/sandbox-windows-acl/package.json:3; packages/sandbox/sandbox-windows-acl/README.md:12
+C185,fs_observe,Read before edit,w4,@deepseek-ai/dsh-fs-observation-policy,packages/fs/fs-observation-policy,,docs/subsystems/filesystem.md,on,packages/bundle/base/cordis.patch.yml:278; packages/fs/fs-observation-policy/package.json:3
+C186,ap_outcomes,Four outcomes,e0 w4,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,,docs/subsystems/approval.md,on,packages/interaction/user-approval/src/index.ts:55
+C189,ap_web,Web approval card,e0 w4,@deepseek-ai/dsh-client-ui-approval,packages/client/ui-approval,,,on,packages/bundle/web-app/cordis.patch.yml:306; packages/client/ui-approval/package.json:3
+C190,ap_acp,ACP client answers,w4,@deepseek-ai/dsh-acp,packages/acp/acp,,,off,packages/acp/acp/src/index.ts:168
+C192,pp_ro,Read only preset,w4,@deepseek-ai/dsh-permission-presets,packages/interaction/permission-presets,,docs/subsystems/permission-presets.md,on,packages/bundle/base/cordis.patch.yml:253; packages/bundle/base/cordis.patch.yml:255
+C193,pp_ww,Workspace preset,e0 w4,@deepseek-ai/dsh-permission-presets,packages/interaction/permission-presets,,,on,packages/bundle/base/cordis.patch.yml:256; packages/bundle/base/cordis.patch.yml:257
+C194,pp_full,Full access preset,e0 w4,@deepseek-ai/dsh-permission-presets,packages/interaction/permission-presets,,,on,packages/bundle/base/cordis.patch.yml:259; packages/bundle/base/cordis.patch.yml:261
+C195,pp_auto,Auto review,e0 w4,@deepseek-ai/dsh-experimental-auto-review,packages/experimental/auto-review,,,exp,packages/experimental/auto-review/package.json:3; packages/interaction/permission-presets/src/index.ts:82
+C196,cr_refs,Credential references,e0 w4,@deepseek-ai/dsh-credentials,packages/credentials/credentials,,docs/subsystems/credentials.md,on,packages/credentials/credentials/package.json:3; packages/bundle/base/cordis.patch.yml:118
+C197,cr_order,Lookup order,w4,@deepseek-ai/dsh-credentials-local,packages/credentials/credentials-local,,,on,packages/credentials/credentials-local/src/index.ts:6; packages/credentials/credentials-local/src/index.ts:8
+C198,cr_file,Owner only file,w4,@deepseek-ai/dsh-credentials-local,packages/credentials/credentials-local,,,on,packages/credentials/credentials-local/src/index.ts:691
+C199,cr_pkce,Account sign in,e0 w4,@deepseek-ai/dsh-deepseek-account-platform,packages/credentials/deepseek-account-platform,,,on,packages/credentials/deepseek-account-platform/src/index.ts:549
+C200,cr_anon,Anonymous id,w4,@deepseek-ai/dsh-anonymous-user-id,packages/identity/anonymous-user-id,,,on,packages/identity/anonymous-user-id/package.json:3; packages/llm/llm-deepseek/src/adapter.ts:128
+C201,wa_loop,Loopback bind,e0 w4,@deepseek-ai/dsh-web-app,packages/bundle/web-app,,,on,packages/bundle/web-app/cordis.patch.yml:167; packages/bundle/web-app/src/startup.ts:75
+C202,wa_token,Launch token,e0 w4,@deepseek-ai/dsh-client-connection,packages/client/connection,,,on,packages/client/connection/src/browser-auth.ts:194
+C203,wa_cookie,Signed cookie,e0 w4,@deepseek-ai/dsh-client-connection,packages/client/connection,,,on,packages/client/connection/src/browser-auth.ts:122; packages/client/connection/src/index.ts:113
+C204,wa_origin,Host and origin checks,w4,@deepseek-ai/dsh-client-connection,packages/client/connection,,,on,packages/client/connection/src/api-request-trust.ts:105; packages/client/connection/src/api-request-trust.ts:11
+C205,wa_cap,Body size cap,w4,@deepseek-ai/dsh-client-connection,packages/client/connection,,,on,packages/client/connection/src/index.ts:106
+C206,ph_scrub,Environment scrub,e0 w4,@deepseek-ai/dsh-subprocess,packages/subprocess/subprocess,,,on,packages/subprocess/subprocess/src/index.ts:47
+C207,eg_model,Model requests,w4,@deepseek-ai/dsh-llm-deepseek,packages/llm/llm-deepseek,,,on,packages/llm/llm-deepseek/src/config.ts:106
+C208,eg_log,Session log in requests,w4 w5,@deepseek-ai/dsh-session-log-deepseek,packages/session/session-log-deepseek,,docs/deepseek-llm-api-wire-extensions.md,on,packages/bundle/base/cordis.patch.yml:44; packages/session/session-log-deepseek/src/index.ts:40; packages/session/session-log-deepseek/src/index.ts:45
+C209,eg_telemetry,Telemetry after feedback,w4 w5,@deepseek-ai/dsh-session-telemetry-otel,packages/session/session-telemetry-otel,,,on,packages/bundle/base/cordis.patch.yml:207; apps/cli/src/profile-boot.ts:294
+C210,eg_product,Product telemetry,w4 w5,@deepseek-ai/dsh-host-product-telemetry-otel,packages/host/product-telemetry-otel,,,off,packages/host/product-telemetry-otel/package.json:3
+C211,sf_preview,Developer preview,w4,,,,README.md,on,README.md:13
+C212,sf_audit,Not security audited,w4,,,,SAFETY.md,on,SAFETY.md:7
+C213,sf_contained,Run it contained,w4,,,,SAFETY.md,on,SAFETY.md:20
+C214,te_otlp,OTLP log export,w5,@deepseek-ai/dsh-session-telemetry-otel,packages/session/session-telemetry-otel,,docs/subsystems/session-telemetry.md,on,packages/bundle/base/cordis.patch.yml:210; packages/session/session-telemetry-otel/package.json:35; packages/session/session-telemetry-otel/package.json:3
+C215,te_modes,Two modes,w5,@deepseek-ai/dsh-session-telemetry-otel,packages/session/session-telemetry-otel,,,on,packages/session/session-telemetry-otel/src/index.ts:47; packages/session/session-telemetry-otel/src/index.ts:48
+C216,te_redact,Redaction step,e0 w5,@deepseek-ai/dsh-session-telemetry,packages/session/session-telemetry,ctx.sessionTelemetry,,on,packages/session/session-telemetry/src/coordinator.ts:204; packages/session/session-telemetry/src/index.ts:147
+C217,fb_command,Feedback command,w5,@deepseek-ai/dsh-command-feedback,packages/feedback/command-feedback,ctx.sessionFeedback,docs/subsystems/feedback.md,on,packages/bundle/base/cordis.patch.yml:310; packages/feedback/command-feedback/package.json:3
+C218,fb_message,Message ratings,w5,@deepseek-ai/dsh-message-feedback,packages/feedback/message-feedback,ctx.messageFeedback,,on,packages/bundle/web-app/cordis.patch.yml:51; packages/feedback/message-feedback/package.json:3
+C219,rc_rebuild,Request rebuilt from log,w5,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,docs/subsystems/invariants.md,off,packages/core/agent-loop/src/invariant.ts:40; packages/bundle/sdk-minimal/cordis.patch.yml:107
+C220,rc_logger,Console logger,w5,@deepseek-ai/cordis-plugin-logger-console,vendor/logger-console,,,on,vendor/logger-console/package.json:3
+C221,rc_inspector,Inspector,w5,@deepseek-ai/dsh-experimental-inspector,packages/experimental/inspector,,,exp,packages/experimental/inspector/package.json:3
+C222,ts_unit,Unit tests,e0 w5,,package.json,,docs/testing.md,on,package.json:53; package.json:256
+C223,ts_coverage,Coverage gate,e0 w5,,vitest.config.ts,,,on,package.json:54; vitest.config.ts:11
+C224,ts_e2e,Real API tests,w5,,vitest.e2e.config.ts,,,on,package.json:57; AGENTS.md:89
+C225,ts_snapshot,Snapshot replay,e0 w5,,snapshots,,,on,package.json:64; AGENTS.md:91
+C226,ts_dup,"Lint, types, duplication",w5,,package.json,,,on,package.json:52; package.json:46
+C227,bm_reconnect,Stream reconnect,w5,,benchmarks/active-stream-reconnect,,,on,benchmarks/active-stream-reconnect/README.md:1; benchmarks/active-stream-reconnect/reconnect.bench.client.ts:26
+C228,bm_continue,Agent continuation,w5,,benchmarks/agent-continuation,,,on,benchmarks/agent-continuation/README.md:1; benchmarks/agent-continuation/agent-continuation.bench.ts:59
+C229,bm_fold,Conversation fold,w5,,benchmarks/conversation-fold,,,on,benchmarks/conversation-fold/conversation-fold.bench.client.ts:61
+C230,bm_browser,Long session browser,w5,,benchmarks/long-session-browser,,,on,benchmarks/long-session-browser/README.md:1
+C231,bm_open,Session open,w5,,benchmarks/session-open,,,on,benchmarks/session-open/session-open.bench.ts:285
+C232,bm_terminal,Terminal IO,w5,,benchmarks/terminal-io,,,on,benchmarks/terminal-io/terminal-io.bench.ts:30
+C233,ci_pr,Pull request checks,e0 w5,,.github/workflows/ci.yml,,,on,.github/workflows/ci.yml:50; .github/workflows/ci.yml:118; .github/workflows/ci.yml:247
+C234,ci_compat,Node version matrix,w5,,.github/workflows/ci.yml,,,on,.github/workflows/ci.yml:392; .github/workflows/ci.yml:399
+C235,ci_e2e,Live API run,w5,,.github/workflows/e2e.yml,,,on,.github/workflows/e2e.yml:1; .github/workflows/e2e.yml:37
+C236,ci_sandbox,Sandbox proofs,e0 w5,,.github/workflows/sandbox.yml,,,on,.github/workflows/sandbox.yml:8
+C237,ci_master,macOS and Windows lanes,w5,,.github/workflows/ci-master.yml,,,on,.github/workflows/ci-master.yml:1
+C238,ci_review,Weighted review,w5,,.github/workflows/weighted-approval.yml,,,on,.github/workflows/weighted-approval.yml:1
+C239,gt_closure,Runtime closure,w5,,scripts/run-gates.ts,,,on,scripts/run-gates.ts:309
+C240,gt_config,Cordis config check,w5,,scripts/run-gates.ts,,,on,scripts/run-gates.ts:310
+C241,gt_graph,Module graph,w5,,scripts/run-gates.ts,,,on,scripts/run-gates.ts:326
+C242,gt_docs,Docs sync,w5,,scripts/run-gates.ts,,,on,package.json:188
+C243,pm_1,ACP default export,w5,,docs/postmortem,,,on,docs/postmortem/0001-acp-default-export-drops-inject.md:1
+C244,pm_2,Expression disabled file tools,w5,,docs/postmortem,,,on,docs/postmortem/0002-js-expression-disabled-filesystem-tools.md:1
+C245,pm_3,Web agent feedback loop,w5,,docs/postmortem,,,on,docs/postmortem/0003-web-agent-gui-feedback-loop.md:1
+C246,pm_4,Landlock partial notice,w5,,docs/postmortem,,,on,docs/postmortem/0004-landlock-partial-notice-misclassified-child-failures.md:1
+C247,pr_web,Web profile,e0 w6,@deepseek-ai/dsh-web-app,packages/bundle/web-app,,packages/boot/app-boot/README.md,on,packages/boot/app-boot/src/profile.ts:184
+C248,pr_desktop,Desktop profile,e0 w6,@deepseek-ai/dsh-desktop,apps/desktop,,,on,apps/desktop/src/project-manager.ts:32
+C249,pr_headless,Headless profile,e0 w6,@deepseek-ai/dsh-headless,packages/bundle/headless,,,on,packages/boot/app-boot/src/profile.ts:187
+C250,pr_acp,ACP profile,e0 w6,@deepseek-ai/dsh-acp-app,packages/bundle/acp-app,,,on,packages/boot/app-boot/src/profile.ts:181
+C251,pr_sdk,SDK profile,e0 w6,@deepseek-ai/dsh-sdk-app,packages/bundle/sdk-app,,,on,packages/boot/app-boot/src/profile.ts:190
+C252,pr_min,SDK minimal profile,e0 w6,@deepseek-ai/dsh-sdk-minimal,packages/bundle/sdk-minimal,,,on,packages/boot/app-boot/src/profile.ts:193
+C253,pz_launcher,dsh launcher,w6,@deepseek-ai/dsh,apps/cli,,,on,package.json:9; apps/cli/package.json:3
+C254,pz_host,Host process,w6,@deepseek-ai/dsh-app-boot,packages/boot/app-boot,,,on,docs/architecture.md:17; packages/boot/app-boot/src/profile.ts:179
+C255,pz_page,Browser page,e0 w10 w6,,apps/web,,,on,apps/web/package.json:56; apps/web/package.json:26
+C256,pz_electron,Electron main,w10 w6,@deepseek-ai/dsh-desktop,apps/desktop,,,on,apps/desktop/package.json:60; apps/desktop/src/main.ts:617
+C257,pz_dhost,Desktop host,e0 w10 w6,,apps/desktop-host,,,on,apps/desktop/src/node-environment.ts:15; apps/desktop-host/src/index.ts:30
+C258,pz_children,Child processes,w6,@deepseek-ai/dsh-subprocess,packages/subprocess/subprocess,,,on,packages/subprocess/subprocess/package.json:3; packages/ptc-runtime/ptc-runtime-node/package.json:3
+C259,hm_root,Data root,w6,@deepseek-ai/dsh-home-paths,packages/util/home-paths,,,on,packages/util/home-paths/README.md:12; packages/util/home-paths/package.json:3
+C260,hm_profiles,Profiles folder,w6,@deepseek-ai/dsh-app-boot,packages/boot/app-boot,,,on,packages/boot/app-boot/src/profile.ts:175
+C261,hm_creds,Credentials file,w6,@deepseek-ai/dsh-credentials-local,packages/credentials/credentials-local,,,on,packages/credentials/credentials-local/src/index.ts:61; packages/credentials/credentials-local/src/index.ts:691
+C262,pl_desktop,Desktop installers,w6,,apps/desktop,,,on,apps/desktop/scripts/electron-builder-config.mjs:162; apps/desktop/scripts/electron-builder-config.mjs:229
+C263,pl_wheels,Python runtime wheels,w6,,python/sdk-runtime,,,on,python/sdk-runtime/platforms.json:3; python/sdk-runtime/platforms.json:11; python/sdk-runtime/platforms.json:19
+C264,pl_native,Native addon,w6,@deepseek-ai/node-addon-system,native/system/packages/entry,,,on,native/system/packages/entry/package.json:5; native/system/packages/linux-x64/package.json:4
+C265,ps_tools,Tools,w7,@deepseek-ai/dsh-agent-preset,packages/preset/agent-preset,,,on,packages/bundle/web-app/presets/standard.patch.yml:20; packages/bundle/web-app/presets/standard.patch.yml:26; packages/bundle/web-app/presets/standard.patch.yml:137; packages/bundle/web-app/presets/standard.patch.yml:32
+C266,ps_deleg,Delegation,w7,@deepseek-ai/dsh-agent-preset,packages/preset/agent-preset,,,on,packages/bundle/web-app/presets/standard.patch.yml:90; packages/bundle/web-app/presets/standard.patch.yml:97; packages/bundle/web-app/presets/standard.patch.yml:123
+C267,ps_plan,Planning and context,w7,@deepseek-ai/dsh-agent-preset,packages/preset/agent-preset,,,on,packages/bundle/web-app/presets/standard.patch.yml:48; packages/bundle/web-app/presets/standard.patch.yml:40; packages/bundle/web-app/presets/standard.patch.yml:133; packages/bundle/web-app/presets/standard.patch.yml:70
+C268,pt_same,Standard tools,w7,@deepseek-ai/dsh-agent-preset,packages/preset/agent-preset,,,on,packages/client/ui-agent-preset/src/client/locales.ts:51; packages/bundle/web-app/presets/ptc.patch.yml:144
+C269,pt_wf,Workflow tool,w7,@deepseek-ai/dsh-tool-workflow,packages/workflow/tool-workflow,,,off,packages/bundle/web-app/presets/ptc.patch.yml:124
+C270,mi_persona,Complete persona,w7,@deepseek-ai/dsh-persona,packages/preset/persona,,,on,packages/bundle/web-app/presets/minimal.patch.yml:11; packages/bundle/web-app/presets/minimal.patch.yml:15
+C271,cm_inspect,Runtime inspection,w7,@deepseek-ai/dsh-tool-cordis,packages/extensions/tool-cordis,,docs/subsystems/extensions.md,on,packages/bundle/web-app/presets/cordis.patch.yml:141; packages/extensions/tool-cordis/package.json:3
+C272,cm_pm,Plugin manager tool,w7,@deepseek-ai/dsh-plugin-manager,packages/boot/plugin-manager,,,on,packages/bundle/web-app/presets/cordis.patch.yml:152; packages/boot/plugin-manager/package.json:3
+C273,cm_skills,Creator skills,w7,@deepseek-ai/dsh-agent-preset,packages/preset/agent-preset,,,on,packages/bundle/web-app/presets/cordis.patch.yml:147; packages/client/ui-agent-preset/src/client/locales.ts:57
+C274,sp_spawn,Spawn,e0 w7,@deepseek-ai/dsh-subagent-spawn-in-process,packages/subagent/subagent-spawn-in-process,,docs/subsystems/subagent.md,on,packages/bundle/base/cordis.patch.yml:352; packages/subagent/subagent-spawn-in-process/package.json:3
+C275,sp_fork,Fork,e0 w7,@deepseek-ai/dsh-subagent-fork-in-process,packages/subagent/subagent-fork-in-process,,,on,packages/bundle/base/cordis.patch.yml:357; packages/subagent/subagent-fork-in-process/package.json:3
+C276,sp_codex,Codex,e0 w7,@deepseek-ai/dsh-subagent-codex,packages/subagent/subagent-codex,,,off,packages/subagent/subagent-codex/package.json:3; packages/bundle/web-app/presets/standard.patch.yml:103; packages/subagent/subagent-codex/package.json:47
+C277,sp_claude,Claude Code,e0 w7,@deepseek-ai/dsh-subagent-claude-code,packages/subagent/subagent-claude-code,,,off,packages/subagent/subagent-claude-code/package.json:3; packages/bundle/web-app/presets/standard.patch.yml:111; packages/subagent/subagent-claude-code/package.json:44
+C278,sp_sdk,DSH SDK child,w7,@deepseek-ai/dsh-subagent-dsh-sdk,packages/subagent/subagent-dsh-sdk,,,off,packages/subagent/subagent-dsh-sdk/package.json:3
+C279,ct_active,Active children,e0 w7,@deepseek-ai/dsh-subagent,packages/subagent/subagent,,,on,packages/subagent/subagent/src/index.ts:203
+C280,ct_depth,Delegation depth,e0 w7,@deepseek-ai/dsh-subagent,packages/subagent/subagent,,,on,packages/subagent/subagent/src/index.ts:202
+C281,ct_msg,Messages to a child,e0 w7,@deepseek-ai/dsh-tool-subagent-control,packages/subagent/tool-subagent-control,,,on,packages/subagent/tool-subagent-control/package.json:3; packages/bundle/web-app/presets/standard.patch.yml:86
+C282,ct_settle,Settle notice,w7,@deepseek-ai/dsh-subagent,packages/subagent/subagent,,,on,packages/subagent/subagent/src/continuation-messages.ts:31
+C283,tm_lead,Lead,w7,@deepseek-ai/dsh-experimental-agent-team,packages/experimental/agent-team,,docs/subsystems/agent-team.md,exp,packages/experimental/agent-team/README.md:12; packages/experimental/agent-team/package.json:3
+C284,tm_mail,Mailbox,w7,@deepseek-ai/dsh-experimental-agent-team,packages/experimental/agent-team,,,exp,packages/experimental/agent-team/package.json:3
+C285,tm_board,Task board,w7,@deepseek-ai/dsh-experimental-tool-agent-team,packages/experimental/tool-agent-team,,,exp,packages/experimental/agent-team/package.json:3; packages/experimental/tool-agent-team/package.json:3
+C286,tm_members,Teammates,w7,@deepseek-ai/dsh-experimental-agent-team-profile,packages/experimental/agent-team-profile,,,exp,packages/experimental/agent-team-profile/cordis.patch.yml:20
+C287,wf_hooks,Script hooks,w7,@deepseek-ai/dsh-workflow,packages/workflow/workflow,,,on,packages/workflow/workflow/README.md:12; packages/workflow/workflow/package.json:3
+C288,wf_runtime,Runs in the code runtime,w7,@deepseek-ai/dsh-workflow-ptc,packages/workflow/workflow-ptc,,,on,packages/workflow/workflow-ptc/package.json:3; packages/bundle/web-app/presets/standard.patch.yml:119
+C289,wk_call,Model calls bash,w7,@deepseek-ai/dsh-tool-bash,packages/shell/tool-bash,,,on,packages/core/agent-loop/src/tool-calls.ts:264; packages/bundle/web-app/presets/standard.patch.yml:20
+C290,wk_pre,Pre execute passes,w7,@deepseek-ai/dsh-tools,packages/core/tools,,,on,packages/core/tools/src/index.ts:1506
+C291,wk_confined,Confined run,w7,@deepseek-ai/dsh-bash-sandbox,packages/shell/bash-sandbox,,,on,packages/bundle/base/cordis.patch.yml:231; packages/shell/bash-sandbox/package.json:3
+C292,wk_denied,Write denied,w7,@deepseek-ai/dsh-sandbox,packages/sandbox/sandbox,,,on,packages/sandbox/sandbox/src/escalation.ts:72
+C293,wk_retry,Model asks for more,w7,@deepseek-ai/dsh-tool-bash,packages/shell/tool-bash,,,on,packages/shell/tool-bash/README.md:68; packages/shell/tool-bash/src/index.ts:68
+C294,wk_asked,Approval asked,w7,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,,,on,packages/interaction/user-approval/src/index.ts:225; packages/bundle/web-app/cordis.patch.yml:306
+C295,wk_allowed,Allowed once,w7,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,,,on,packages/interaction/user-approval/src/index.ts:232
+C296,wk_wider,Runs with wider access,w7,@deepseek-ai/dsh-sandbox,packages/sandbox/sandbox,,,on,packages/sandbox/sandbox/src/escalation.ts:45; packages/sandbox/sandbox/src/escalation.ts:12
+C297,wk_result,Result logged,w7,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,,on,packages/core/agent-loop/src/tool-calls.ts:282
+C298,rw_denial,Denial in the result,w7,@deepseek-ai/dsh-tool-bash,packages/shell/tool-bash,,,on,packages/shell/tool-bash/src/index.ts:95
+C299,co_bundles,Bundle patches,e0 w8,@deepseek-ai/dsh,apps/cli,,docs/architecture.md,on,apps/cli/src/profile-boot.ts:185
+C300,co_profile,Profile patch,e0 w8,@deepseek-ai/dsh,apps/cli,,,on,apps/cli/src/profile-boot.ts:187
+C301,co_home,Home patch,e0 w8,@deepseek-ai/dsh,apps/cli,,,on,apps/cli/src/profile-boot.ts:189
+C302,co_overlay,Command line overlays,e0 w8,@deepseek-ai/dsh,apps/cli,,,on,apps/cli/src/profile-boot.ts:192
+C303,co_telemetry,Telemetry switch,e0 w8,@deepseek-ai/dsh,apps/cli,,,on,apps/cli/src/profile-boot.ts:190
+C304,rl_replace,Whole config replaced,w8,@deepseek-ai/dsh-base,packages/bundle/base,,,on,packages/bundle/base/cordis.patch.yml:6
+C305,rl_dump,Dump the tree,w8,@deepseek-ai/dsh,apps/cli,,,on,apps/cli/src/args.ts:34; docs/architecture.md:36
+C306,rl_append,Enable appends,w8,@deepseek-ai/dsh-plugin-manager,packages/boot/plugin-manager,,,on,packages/boot/plugin-manager/README.md:40; packages/boot/plugin-manager/package.json:3
+C307,lc_install,Install a bundle,e0 w8,@deepseek-ai/dsh-plugin-manager,packages/boot/plugin-manager,,packages/boot/plugin-manager/README.md,on,packages/boot/plugin-manager/src/index.ts:506; packages/bundle/base/cordis.patch.yml:21; package.json:7
+C308,lc_registry,Registry fallback,w8,@deepseek-ai/dsh-plugin-manager,packages/boot/plugin-manager,,,on,packages/boot/plugin-manager/src/index.ts:186
+C309,lc_restore,Restore on failure,w8,@deepseek-ai/dsh-plugin-manager,packages/boot/plugin-manager,,,on,packages/boot/plugin-manager/src/index.ts:79
+C310,lc_scripts,Build script consent,w8,@deepseek-ai/dsh-plugin-manager,packages/boot/plugin-manager,,,on,packages/boot/plugin-manager/src/index.ts:474; packages/boot/plugin-manager/README.md:58
+C311,lc_hmr,Hot reload,e0 w8,@deepseek-ai/dsh-hmr,packages/boot/hmr,ctx.hmr,,on,packages/bundle/base/cordis.patch.yml:29; packages/boot/hmr/package.json:3
+C312,lc_unload,Unload undoes effects,e0 w8,@deepseek-ai/cordis,vendor/cordis,,,on,vendor/cordis/src/fiber.ts:415; docs/architecture.md:13
+C313,dv_checks,Pre push checks,w8,,.agents/skills,,,on,AGENTS.md:114; .agents/skills/dsh-pre-push-checks/SKILL.md:2
+C314,dv_docs,Docs with every change,w8,,AGENTS.md,,,on,AGENTS.md:174
+C315,dv_notes,Decision notes,w8,,.agents/notes,,,on,AGENTS.md:153
+C316,dv_bilingual,Bilingual docs,w8,,scripts/run-gates.ts,,,on,scripts/run-gates.ts:794
+C317,rf_npm,npm packages,e0 w8,,.github/workflows,,,on,.github/workflows/release.yml:8; .github/workflows/release-publish.yml:6; scripts/release/families.ts:328
+C318,rf_vendor,Vendored Cordis,w8,,.github/workflows,,,on,.github/workflows/release-vendor.yml:9; .github/workflows/release-vendor.yml:58
+C319,rf_native,Native addon,w8,,.github/workflows,,,on,.github/workflows/node-addon-system-release.yml:4
+C320,rf_python,Python wheels,e0 w8,,python,,,on,.github/workflows/python-release.yml:1; .gitlab-ci.yml:3
+C321,rf_desktop,Desktop installers,e0 w8,,apps/desktop,,,on,package.json:32; apps/desktop/package.json:38; apps/desktop/package.json:41
+C322,dk_sign,Signed builds,e0 w8,,apps/desktop,,,on,apps/desktop/scripts/electron-builder-config.mjs:161; apps/desktop/README.md:184
+C323,dk_feed,Update feed,e0 w8,,apps/desktop,,,on,apps/desktop/README.md:241; apps/desktop/package.json:41
+C324,dk_targets,Three targets,w8,,apps/desktop,,,on,apps/desktop/README.md:234; apps/desktop/package.json:36
+C325,dk_newer,Newer only,w8,,apps/desktop,,,on,apps/desktop/README.md:180; apps/desktop/package.json:41
+C326,sf_bump,Writer version,w8,@deepseek-ai/dsh-session,packages/core/session,,docs/session-format-status.md,on,packages/core/session/src/types.ts:89
+C327,sf_step,Adjacent step,w8,@deepseek-ai/dsh-session-format-catalog,packages/session/session-format-catalog,,,on,packages/session/session-format-catalog/package.json:3; packages/session/session-format/package.json:3
+C328,sf_readopen,Read opens,w8,@deepseek-ai/dsh-session-persistence-jsonl,packages/session/session-persistence-jsonl,,,on,docs/architecture.md:123; packages/session/session-persistence-jsonl/src/index.ts:124
+C329,sf_writeopen,Write opens,w8,@deepseek-ai/dsh-session-persistence-jsonl,packages/session/session-persistence-jsonl,,,on,docs/architecture.md:123; packages/session/session-persistence-jsonl/src/index.ts:47
+C330,m_loop,Agent loop,w9,,,,,on,packages/bundle/base/cordis.patch.yml:511; packages/bundle/sdk-minimal/cordis.patch.yml:122
+C331,m_ds,DeepSeek adapter,w9,,,,,on,packages/bundle/base/cordis.patch.yml:525; packages/bundle/sdk-minimal/cordis.patch.yml:27
+C332,m_pi,pi ai adapter,w9,,,,,on,packages/bundle/base/cordis.patch.yml:128
+C333,m_sess,Session files,w9,,,,,on,packages/bundle/base/cordis.patch.yml:131; packages/bundle/sdk-minimal/cordis.patch.yml:155
+C334,m_sandbox,Sandbox mode,w9,,,,,on,packages/bundle/base/cordis.patch.yml:229; packages/bundle/sdk-minimal/cordis.patch.yml:42
+C335,m_approval,Approval,w9,,,,,on,packages/bundle/base/cordis.patch.yml:245
+C336,m_shell,Shell tool,w9,,,,,on,packages/bundle/web-app/cordis.patch.yml:447; packages/bundle/base/cordis.patch.yml:267; packages/bundle/sdk-minimal/cordis.patch.yml:127; packages/bundle/web-app/presets/standard.patch.yml:20
+C337,m_fs,File tools,w9,,,,,on,packages/bundle/web-app/cordis.patch.yml:466; packages/bundle/base/cordis.patch.yml:281; packages/bundle/web-app/presets/standard.patch.yml:26
+C338,m_sub,Subagent tool,w9,,,,,on,packages/bundle/web-app/cordis.patch.yml:528; packages/bundle/base/cordis.patch.yml:370; packages/bundle/web-app/presets/standard.patch.yml:90
+C339,m_compact,Compaction,w9,,,,,on,packages/bundle/web-app/cordis.patch.yml:506; packages/bundle/base/cordis.patch.yml:341; packages/bundle/web-app/presets/standard.patch.yml:70
+C340,m_tel,Session telemetry,w9,,,,,on,packages/bundle/base/cordis.patch.yml:205
+C341,m_log,Session log in requests,w9,,,,,on,packages/bundle/base/cordis.patch.yml:44; packages/bundle/sdk-minimal/cordis.patch.yml:21
+C342,m_inv,Runtime invariants,w9,,,,,on,packages/bundle/sdk-minimal/cordis.patch.yml:107
+C343,m_hmr,Hot reload,w9,,,,,on,packages/bundle/base/cordis.patch.yml:29; packages/bundle/headless/cordis.patch.yml:33; packages/bundle/sdk-app/cordis.patch.yml:24; packages/bundle/acp-app/cordis.patch.yml:23
+C344,m_surface,Surface,w9,,,,,on,packages/bundle/web-app/cordis.patch.yml:164; packages/bundle/headless/cordis.patch.yml:26; packages/bundle/sdk-app/cordis.patch.yml:19; packages/bundle/acp-app/cordis.patch.yml:17; packages/bundle/sdk-minimal/cordis.patch.yml:12
+C345,q_shell,Shell tool,w9,,,,,on,packages/bundle/web-app/presets/standard.patch.yml:20; packages/bundle/web-app/presets/ptc.patch.yml:20; packages/bundle/web-app/presets/minimal.patch.yml:30; packages/bundle/web-app/presets/cordis.patch.yml:23
+C346,q_fs,File tools,w9,,,,,on,packages/bundle/web-app/presets/standard.patch.yml:26; packages/bundle/web-app/presets/ptc.patch.yml:26; packages/bundle/web-app/presets/cordis.patch.yml:29
+C347,q_web,Web tools,w9,,,,,on,packages/bundle/web-app/presets/standard.patch.yml:137; packages/bundle/web-app/presets/ptc.patch.yml:139; packages/bundle/web-app/presets/cordis.patch.yml:136
+C348,q_sub,Subagent tool,w9,,,,,on,packages/bundle/web-app/presets/standard.patch.yml:90; packages/bundle/web-app/presets/ptc.patch.yml:90; packages/bundle/web-app/presets/cordis.patch.yml:89
+C349,q_wf,Workflow tool,w9,,,,,on,packages/bundle/web-app/presets/standard.patch.yml:123; packages/bundle/web-app/presets/ptc.patch.yml:124; packages/bundle/web-app/presets/cordis.patch.yml:122
+C350,q_code,Code mode,w9,,,,,on,packages/bundle/web-app/presets/ptc.patch.yml:144
+C351,q_pm,Plugin manager tool,w9,,,,,on,packages/bundle/web-app/presets/standard.patch.yml:144; packages/bundle/web-app/presets/ptc.patch.yml:150; packages/bundle/web-app/presets/cordis.patch.yml:152
+C352,seam_mcpResources,MCP resources,s1,@deepseek-ai/dsh-mcp-resources,packages/mcp/mcp-resources,ctx.mcpResources,docs/capability-seams.md,on,docs/capability-seams.md:575; packages/mcp/mcp-resources/src/index.ts:56; packages/mcp/mcp-client/package.json:42
+C353,seam_browserUse,Browser use,s1,@deepseek-ai/dsh-browser-use,packages/browser-use/browser-use,ctx.browserUse,docs/capability-seams.md,on,docs/capability-seams.md:576; packages/browser-use/browser-use/src/index.ts:20
+C354,seam_computerUse,Computer use,s1,@deepseek-ai/dsh-computer-use,packages/computer-use/computer-use,ctx.computerUse,docs/capability-seams.md,on,docs/capability-seams.md:577; packages/computer-use/computer-use/src/index.ts:20
+C355,seam_attachments,Attachments,s1,@deepseek-ai/dsh-attachment,packages/attachment/attachment,ctx.attachments,docs/capability-seams.md,on,docs/capability-seams.md:579; packages/attachment/attachment/src/index.ts:55
+C356,seam_llm,Model service,e0 s1,@deepseek-ai/dsh-llm,packages/llm/llm,ctx.llm,docs/capability-seams.md,on,docs/capability-seams.md:581; packages/llm/llm/src/index.ts:351
+C357,seam_deepseekLlmApiExtensions,DeepSeek request fields,s1,@deepseek-ai/dsh-deepseek-llm-api-extensions,packages/llm/deepseek-llm-api-extensions,ctx.deepseekLlmApiExtensions,docs/capability-seams.md,on,docs/capability-seams.md:582; packages/llm/deepseek-llm-api-extensions/src/index.ts:70
+C358,seam_sessionPersistence,Session persistence,e0 s1,@deepseek-ai/dsh-session-persistence,packages/session/session-persistence,ctx.sessionPersistence,docs/capability-seams.md,on,docs/capability-seams.md:601; packages/session/session-persistence/src/index.ts:140; packages/session/session-persistence-jsonl/src/index.ts:68
+C359,seam_credentials,Credentials,s1,@deepseek-ai/dsh-credentials,packages/credentials/credentials,ctx.credentials,docs/capability-seams.md,on,docs/capability-seams.md:605; packages/credentials/credentials/src/index.ts:172; packages/credentials/credentials-local/package.json:39
+C360,seam_deepseekAccount,DeepSeek account,s1,@deepseek-ai/dsh-deepseek-account,packages/credentials/deepseek-account,ctx.deepseekAccount,docs/capability-seams.md,on,docs/capability-seams.md:606; packages/credentials/deepseek-account/src/index.ts:34
+C361,seam_authorization,Authorization,s1,@deepseek-ai/dsh-authorization,packages/credentials/authorization,ctx.authorization,docs/capability-seams.md,on,docs/capability-seams.md:607; packages/credentials/authorization/src/index.ts:197
+C362,seam_sessionTelemetry,Session telemetry,s1,@deepseek-ai/dsh-session-telemetry,packages/session/session-telemetry,ctx.sessionTelemetry,docs/capability-seams.md,on,docs/capability-seams.md:609; packages/session/session-telemetry/src/index.ts:147; packages/session/session-telemetry-otel/package.json:31
+C363,seam_storage,Storage,s1,@deepseek-ai/dsh-storage,packages/storage/storage,ctx.storage,docs/capability-seams.md,on,docs/capability-seams.md:610; packages/storage/storage/src/index.ts:54
+C364,seam_sessionQuery,Session query,s1,@deepseek-ai/dsh-session-query,packages/session-query/session-query,ctx.sessionQuery,docs/capability-seams.md,on,docs/capability-seams.md:615; packages/session-query/session-query/src/index.ts:106; packages/session-query/session-query-sqlite/src/schema.ts:127
+C365,seam_fileReferences,File references,s1,@deepseek-ai/dsh-file-reference,packages/context/file-reference,ctx.fileReferences,docs/capability-seams.md,on,docs/capability-seams.md:616; packages/context/file-reference/src/index.ts:28
+C366,seam_sessionTitle,Session titles,s1,@deepseek-ai/dsh-session-title,packages/session/session-title,ctx.sessionTitle,docs/capability-seams.md,on,docs/capability-seams.md:618; packages/session/session-title/src/index.ts:311
+C367,seam_userQuestions,Questions to the user,s1,@deepseek-ai/dsh-user-questions,packages/interaction/user-questions,ctx.userQuestions,docs/capability-seams.md,on,docs/capability-seams.md:621; packages/interaction/user-questions/src/index.ts:67
+C368,seam_skills,Skills,s1,@deepseek-ai/dsh-skill,packages/skill/skill,ctx.skills,docs/capability-seams.md,on,docs/capability-seams.md:627; packages/skill/skill/src/index.ts:374
+C369,seam_subprocess,Subprocess,s1b,@deepseek-ai/dsh-subprocess,packages/subprocess/subprocess,ctx.subprocess,docs/capability-seams.md,on,docs/capability-seams.md:634; packages/subprocess/subprocess/src/index.ts:119; packages/subprocess/subprocess-local/package.json:53
+C370,seam_shell,Shell,e0 s1b,@deepseek-ai/dsh-shell,packages/shell/shell,ctx.shell,docs/capability-seams.md,on,docs/capability-seams.md:635; packages/shell/shell/src/index.ts:66; packages/shell/pwsh-sandbox/src/index.ts:43
+C371,seam_terminals,Terminals,s1b,@deepseek-ai/dsh-terminal,packages/terminal/terminal,ctx.terminals,docs/capability-seams.md,on,docs/capability-seams.md:637; packages/terminal/terminal/src/index.ts:116
+C372,seam_sandbox,Sandbox,e0 s1b,@deepseek-ai/dsh-sandbox,packages/sandbox/sandbox,ctx.sandbox,docs/capability-seams.md,on,docs/capability-seams.md:638; packages/sandbox/sandbox/src/index.ts:162; packages/sandbox/sandbox-local/src/index.ts:70
+C373,seam_approval,Approval,e0 s1b,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,ctx.approval,docs/capability-seams.md,on,docs/capability-seams.md:640; packages/interaction/user-approval/src/index.ts:156
+C374,seam_ptcRuntime,Code runtime,s1b,@deepseek-ai/dsh-ptc-runtime,packages/ptc-runtime/ptc-runtime,ctx.ptcRuntime,docs/capability-seams.md,on,docs/capability-seams.md:642; packages/ptc-runtime/ptc-runtime/src/index.ts:134
+C375,seam_fs,File system,e0 s1b,@deepseek-ai/dsh-fs,packages/fs/fs,ctx.fs,docs/capability-seams.md,on,docs/capability-seams.md:643; packages/fs/fs/src/index.ts:89
+C376,seam_compaction,Compaction,s1b,@deepseek-ai/dsh-compaction,packages/compaction/compaction,ctx.compaction,docs/capability-seams.md,on,docs/capability-seams.md:644; packages/compaction/compaction/src/index.ts:121
+C377,seam_subagents,Subagents,e0 s1b,@deepseek-ai/dsh-subagent,packages/subagent/subagent,ctx.subagents,docs/capability-seams.md,on,docs/capability-seams.md:645; packages/subagent/subagent/src/index.ts:215
+C378,seam_speechToText,Speech to text,s1b,@deepseek-ai/dsh-experimental-speech-to-text,packages/experimental/speech-to-text,ctx.speechToText,docs/capability-seams.md,exp,docs/capability-seams.md:646; packages/experimental/speech-to-text/src/index.ts:48; packages/experimental/speech-to-text-sensevoice/package.json:39
+C379,seam_jobs,Background jobs,s1b,@deepseek-ai/dsh-jobs,packages/jobs/jobs,ctx.jobs,docs/capability-seams.md,on,docs/capability-seams.md:649; packages/jobs/jobs/src/index.ts:93
+C380,seam_web,Web search and fetch,e0 s1b,@deepseek-ai/dsh-web,packages/web/web,ctx.web,docs/capability-seams.md,on,docs/capability-seams.md:650; packages/web/web/src/index.ts:91
+C381,seam_spillStore,Spill store,s1b,@deepseek-ai/dsh-spill,packages/spill/spill,ctx.spillStore,docs/capability-seams.md,on,docs/capability-seams.md:651; packages/spill/spill/src/index.ts:47
+C382,seam_directoryPicker,Directory picker,s1b,@deepseek-ai/dsh-host-directory-picker,packages/host/directory-picker,ctx.directoryPicker,docs/capability-seams.md,on,docs/capability-seams.md:652; packages/host/directory-picker/src/index.ts:105
+C383,seam_workflowEngine,Workflow engine,s1b,@deepseek-ai/dsh-workflow,packages/workflow/workflow,ctx.workflowEngine,docs/capability-seams.md,on,docs/capability-seams.md:655; packages/workflow/workflow/src/index.ts:159
+C384,seam_lsp,Language servers,s1b,@deepseek-ai/dsh-lsp,packages/lsp/lsp,ctx.lsp,docs/capability-seams.md,on,docs/capability-seams.md:657; packages/lsp/lsp/src/index.ts:87
+C385,cl_kernel,Client kernel,w10,@deepseek-ai/dsh-client-web,packages/client/web,,docs/subsystems/web-client.md,on,packages/client/web/package.json:3; packages/bundle/web-app/cordis.patch.yml:206
+C386,cl_store,Client store,w10,@deepseek-ai/dsh-client-store,packages/client/store,,,on,packages/client/store/package.json:3
+C387,cl_conv,Conversation,w10,@deepseek-ai/dsh-client-ui-conversation,packages/client/ui-conversation,,docs/subsystems/conversation.md,on,packages/client/ui-conversation/package.json:3; packages/bundle/web-app/cordis.patch.yml:309; packages/bundle/web-app/cordis.patch.yml:425
+C388,cl_side,Sidebars,w10,@deepseek-ai/dsh-client-ui-sidebar-right,packages/client/ui-sidebar-right,,docs/subsystems/sidebar-right.md,on,packages/client/ui-sidebar-right/package.json:3; packages/bundle/web-app/cordis.patch.yml:280; packages/bundle/web-app/cordis.patch.yml:277
+C389,cl_settings,Settings,w10,@deepseek-ai/dsh-client-ui-settings,packages/client/ui-settings,,docs/subsystems/settings.md,on,packages/client/ui-settings/package.json:3; packages/bundle/web-app/cordis.patch.yml:289; packages/bundle/web-app/cordis.patch.yml:295
+C390,wr_rpc,Remote calls,e0 w10,@deepseek-ai/dsh-api-gateway,packages/api/gateway,,docs/api-gateway.md,on,docs/api-gateway.md:123; packages/api/gateway/src/index.ts:234
+C391,wr_stream,Stream socket,e0 w10,@deepseek-ai/dsh-api-gateway,packages/api/gateway,,,on,packages/api/gateway/src/stream-protocol.ts:7; docs/api-gateway.md:58; packages/api/gateway/package.json:61
+C392,wr_plugins,Client plugin bundles,w10,@deepseek-ai/dsh-client-modules,packages/client/modules,,,on,packages/client/modules/src/index.ts:225
+C393,wr_hmr,Dev reload events,w10,@deepseek-ai/dsh-client-hmr,packages/client/hmr,,,on,packages/client/hmr/src/events.ts:44; packages/bundle/web-app/cordis.patch.yml:197
+C394,hs_webserver,Web server,e0 w10,@deepseek-ai/dsh-host-webserver,packages/host/webserver,,docs/subsystems/web-server.md,on,packages/bundle/web-app/cordis.patch.yml:164; packages/host/webserver/package.json:3; packages/bundle/web-app/cordis.patch.yml:168
+C395,hs_static,Front end files,w10,@deepseek-ai/dsh-host-frontend-static,packages/host/frontend-static,,,on,packages/host/frontend-static/package.json:3
+C396,hs_conn,Client connection,e0 w10,@deepseek-ai/dsh-client-connection,packages/client/connection,,,on,packages/bundle/web-app/cordis.patch.yml:211; packages/client/connection/package.json:3
+C397,hs_gateway,API gateway,w10,@deepseek-ai/dsh-api-gateway,packages/api/gateway,,,on,packages/bundle/base/cordis.patch.yml:53; packages/api/gateway/package.json:3
+C398,hs_remotes,Remote namespaces,w10,@deepseek-ai/dsh-api-remotes,packages/api/remotes,,,on,packages/bundle/web-app/cordis.patch.yml:225; packages/bundle/web-app/cordis.patch.yml:103; packages/bundle/web-app/cordis.patch.yml:142; packages/bundle/web-app/cordis.patch.yml:108
+C399,hs_boot,Boot data in the page,w10,@deepseek-ai/dsh-client-modules,packages/client/modules,,,on,packages/client/modules/src/index.ts:585
+C400,dk_scheme,App scheme,w10,,apps/desktop,,,on,apps/desktop/src/main.ts:629; apps/desktop/src/ipc.ts:84
+C401,dk_cookie,Cookie kept by the shell,w10,,apps/desktop,,,on,apps/desktop/src/main.ts:675
+C402,dk_guests,Browser tabs,w10,@deepseek-ai/dsh-client-ui-sidebar-browser,packages/client/ui-sidebar-browser,,,on,packages/bundle/web-app/cordis.patch.yml:273; apps/desktop/README.md:81
+C403,sd_py,Python SDK,w10,,python/sdk,,,on,python/sdk/src/deepseek_harness/api.py:29
+C404,os_hash,Content hash names,w2,@deepseek-ai/dsh-attachment-local,packages/attachment/attachment-local,,,on,packages/attachment/attachment-local/src/store.ts:26; packages/attachment/attachment-local/src/store.ts:22
+C405,tl_jobs,Background jobs,e0 w3,@deepseek-ai/dsh-tool-jobs,packages/jobs/tool-jobs,,,on,packages/bundle/web-app/cordis.patch.yml:463; packages/jobs/tool-jobs/package.json:3
+C406,tl_office,Office documents,e0 w3,@deepseek-ai/dsh-skill-office,packages/skill/skill-office,,,off,packages/bundle/sdk-app/cordis.patch.yml:37; packages/skill/skill-office/package.json:3; packages/skill/skill-office/package.json:40
+C407,tl_schedule,Schedule a message,w3,@deepseek-ai/dsh-schedule,packages/schedule/schedule,,,off,packages/bundle/web-app/cordis.patch.yml:126; packages/schedule/schedule/package.json:3
+C408,tl_cordis,Inspect the plugin tree,w3,@deepseek-ai/dsh-tool-cordis,packages/extensions/tool-cordis,,,on,packages/bundle/web-app/presets/cordis.patch.yml:141; packages/extensions/tool-cordis/package.json:3
+C409,tl_codex,Codex subagent,w3,@deepseek-ai/dsh-subagent-codex,packages/subagent/subagent-codex,,,off,packages/bundle/web-app/presets/standard.patch.yml:103; packages/subagent/subagent-codex/package.json:3
+C410,tl_claudecode,Claude Code subagent,w3,@deepseek-ai/dsh-subagent-claude-code,packages/subagent/subagent-claude-code,,,off,packages/bundle/web-app/presets/standard.patch.yml:111; packages/subagent/subagent-claude-code/package.json:3
+C411,w3_exa,Exa search,e0 w3,@deepseek-ai/dsh-web-search-exa,packages/web/web-search-exa,ctx.web,,off,packages/web/web-search-exa/package.json:3; packages/web/web-search-exa/src/provider.ts:22; packages/web/web-search-exa/src/index.ts:58
+C412,w3_pplx,Perplexity search,e0 w3,@deepseek-ai/dsh-web-search-perplexity,packages/web/web-search-perplexity,ctx.web,,off,packages/web/web-search-perplexity/package.json:3; packages/web/web-search-perplexity/src/provider.ts:22; packages/web/web-search-perplexity/src/index.ts:53
+C413,ap_ask,Ask logged,w4 w7,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,,docs/subsystems/approval.md,on,packages/interaction/user-approval/src/index.ts:225
+C414,ap_policy,Never policy,w4,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,,,on,packages/interaction/user-approval/src/index.ts:63; packages/interaction/user-approval/src/index.ts:275; packages/bundle/base/cordis.patch.yml:247
+C415,ap_route,Routed to a channel,w4,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,,,on,packages/interaction/user-approval/src/index.ts:282
+C416,ap_decided,Decision logged,w4 w7,@deepseek-ai/dsh-user-approval,packages/interaction/user-approval,,,on,packages/interaction/user-approval/src/index.ts:232; packages/interaction/user-approval/src/index.ts:219
+C417,sb_full,No confinement,w6,@deepseek-ai/dsh-sandbox,packages/sandbox/sandbox,,,on,packages/sandbox/sandbox/src/index.ts:30
+C418,sb_win,Windows ACL runner,w6,@deepseek-ai/dsh-sandbox-local,packages/sandbox/sandbox-local,,,on,packages/sandbox/sandbox-local/src/index.ts:166
+C419,sb_mac,Seatbelt profile,w6,@deepseek-ai/dsh-sandbox-local,packages/sandbox/sandbox-local,,,on,packages/sandbox/sandbox-local/src/index.ts:162
+C420,lc_peer,Peer check,e0 w8,,packages/boot/app-boot/src/plugin-compatibility.ts,,,on,packages/boot/app-boot/src/plugin-compatibility.ts:61; packages/boot/app-boot/src/compatibility-preflight.ts:63
+C421,lc_load,Load into the tree,e0 w8,,vendor/loader,,,on,vendor/loader/src/index.ts:73; vendor/loader/src/index.ts:77; package.json:9
+C422,dk_updater,Auto updates,w10,@deepseek-ai/dsh-desktop,apps/desktop,,,on,apps/desktop/src/update-coordinator.ts:6; apps/desktop/src/update-coordinator.ts:12
+C423,w11_seam,LLM seam,w11,@deepseek-ai/dsh-llm,packages/llm/llm,ctx.llm,docs/subsystems/llm-streaming.md,on,packages/llm/llm/src/index.ts:351; packages/llm/llm/src/index.ts:396
+C424,w11_creds,Credentials lookup,e0 w11,@deepseek-ai/dsh-llm-deepseek-api-key,packages/llm/llm-deepseek-api-key,ctx.credentials,docs/subsystems/credentials.md,on,packages/llm/llm-deepseek-api-key/src/index.ts:22; packages/llm/llm-deepseek-api-key/src/index.ts:24
+C425,w11_build,Build request,e0 w11,@deepseek-ai/dsh-llm-deepseek,packages/llm/llm-deepseek,,,on,packages/llm/llm-deepseek/src/serialize.ts:1
+C426,w11_route,Resolve route,e0 w11,@deepseek-ai/dsh-llm,packages/llm/llm,ctx.llm,,on,packages/llm/llm/src/index.ts:936
+C427,w11_send,Send the request,e0 w11,@deepseek-ai/dsh-llm-deepseek,packages/llm/llm-deepseek,,,on,packages/llm/llm-deepseek/src/adapter.ts:129; packages/llm/llm-deepseek/src/adapter.ts:126
+C428,w11_stream,Stream the reply,e0 w11,@deepseek-ai/dsh-llm-deepseek,packages/llm/llm-deepseek,,,on,packages/llm/llm-deepseek/src/sse.ts:13; packages/llm/llm-deepseek/package.json:47
+C429,w11_retry,Retry on failure,e0 w11,@deepseek-ai/dsh-llm-retry,packages/llm/llm-retry,,,on,packages/llm/llm/src/retry-policy.ts:12; packages/llm/llm/src/retry-policy.ts:20; packages/llm/llm/src/retry-policy.ts:23
+C430,w11_meter,Meter tokens,e0 w11,@deepseek-ai/dsh-token-meter,packages/llm/token-meter,ctx.tokenMeter,,on,packages/llm/token-meter/src/index.ts:120; packages/llm/token-meter/package.json:3
+C431,w11_append,Append to session log,e0 w11,@deepseek-ai/dsh-agent-loop,packages/core/agent-loop,,,on,packages/core/agent-loop/src/agent.ts:415
+C432,w11_routes,Official and account routes,w11,@deepseek-ai/dsh-llm-deepseek-api-key,packages/llm/llm-deepseek-api-key,,,on,packages/llm/llm-deepseek-api-key/src/index.ts:39; packages/llm/llm-deepseek-account/src/index.ts:42
+C433,w11_wire,Anthropic Messages format,w11,@deepseek-ai/dsh-llm-deepseek,packages/llm/llm-deepseek,,,on,packages/llm/llm-deepseek/src/adapter.ts:126; packages/llm/llm-deepseek/src/config.ts:106
+C434,w11_ext,Wire extensions,w11,@deepseek-ai/dsh-deepseek-llm-api-extensions,packages/llm/deepseek-llm-api-extensions,ctx.deepseekLlmApiExtensions,,on,packages/llm/llm-deepseek/src/request-extensions.ts:8; packages/llm/llm-deepseek/src/host.ts:36
+C435,w11_models,Default model catalog,w11,@deepseek-ai/dsh-llm-deepseek,packages/llm/llm-deepseek,,,on,packages/llm/llm-deepseek/src/models.ts:8; packages/llm/llm-deepseek/src/models.ts:16
+C436,w11_piai_pkg,pi ai library,w11,@deepseek-ai/dsh-llm-pi-ai,packages/llm/llm-pi-ai,,,on,packages/llm/llm-pi-ai/package.json:3; packages/llm/llm-pi-ai/package.json:44
+C437,w11_proto_oaic,OpenAI completions,e0 w11,@deepseek-ai/dsh-llm-pi-ai,packages/llm/llm-pi-ai,,,on,packages/llm/llm-pi-ai/src/provider.ts:48
+C438,w11_proto_oair,OpenAI responses,w11,@deepseek-ai/dsh-llm-pi-ai,packages/llm/llm-pi-ai,,,on,packages/llm/llm-pi-ai/src/provider.ts:49
+C439,w11_proto_anth,Anthropic messages,e0 w11,@deepseek-ai/dsh-llm-pi-ai,packages/llm/llm-pi-ai,,,on,packages/llm/llm-pi-ai/src/provider.ts:50
+C440,w11_piai_selfhost,Self hosted endpoints,w11,@deepseek-ai/dsh-client-ui-settings-models,packages/client/ui-settings-models,,,on,packages/client/ui-settings-models/README.md:54; packages/llm/llm-pi-ai/src/config.ts:104
+C441,w11_sel_session,Session default model,w11,@deepseek-ai/dsh-agent-default-model,packages/core/agent-default-model,ctx.agentDefaultModel,,on,packages/bundle/base/cordis.patch.yml:83; packages/bundle/base/cordis.patch.yml:85; packages/core/agent-default-model/src/index.ts:58
+C442,w11_sel_subagent,Subagent route default,w11,@deepseek-ai/dsh-subagent,packages/subagent/subagent,,,on,packages/subagent/subagent/src/types.ts:361
+C443,w11_sel_compaction,Compaction model policy,w11,@deepseek-ai/dsh-compaction-basic,packages/compaction/compaction-basic,ctx.compaction,,on,packages/compaction/compaction-basic/src/index.ts:48
+C444,w11_sel_title,Session title model,w11,@deepseek-ai/dsh-session-title-llm,packages/session/session-title-llm,,,on,packages/session/session-title-llm/package.json:3
+C445,w11_endpoint,DeepSeek API,w11,@deepseek-ai/dsh-llm-deepseek,packages/llm/llm-deepseek,,,on,packages/llm/llm-deepseek/src/config.ts:106
+C446,w6_bwrap,Bubblewrap mount,w6,@deepseek-ai/dsh-sandbox-local,packages/sandbox/sandbox-local,,,on,packages/sandbox/sandbox-local/src/index.ts:161; packages/sandbox/sandbox-local/src/index.ts:69
+C447,w6_landlock,Landlock launcher,w6,@deepseek-ai/dsh-sandbox-local,packages/sandbox/sandbox-local,,,on,packages/sandbox/sandbox-local/src/index.ts:510; packages/sandbox/sandbox-local/src/index.ts:235
